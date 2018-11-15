@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<configuration>
+    <feature automatic="selected" name="Reiseplaner"/>
+    <feature automatic="selected" manual="selected" name="Unterkunft buchen"/>
+    <feature manual="selected" name="Hotel buchen"/>
+    <feature manual="selected" name="Währungsrechner"/>
+    <feature automatic="selected" name="Zahlung"/>
+    <feature manual="selected" name="Kreditkarte"/>
+    <feature automatic="unselected" name="PayPal"/>
+    <feature automatic="unselected" name="GiroPay"/>
+    <feature automatic="selected" name="Suchleiste"/>
+</configuration>

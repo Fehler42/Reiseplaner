@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<featureModel>
+    <properties/>
+    <struct>
+        <and abstract="true" mandatory="true" name="Reiseplaner">
+            <alt abstract="true" mandatory="true" name="Zahlung">
+                <feature name="Kreditkarte"/>
+                <feature name="PayPal"/>
+                <feature name="GiroPay"/>
+            </alt>
+            <feature name="Kniggetipps"/>
+            <or abstract="true" name="Reise buchen">
+                <feature name="Kreuzfahrt"/>
+                <feature name="Flug"/>
+                <and name="Auto mieten">
+                    <feature name="Route planen"/>
+                </and>
+                <feature name="Busreise"/>
+            </or>
+            <feature name="Währungsumrechner"/>
+            <or abstract="true" name="Unterkunft buchen">
+                <feature name="Hotel Buchen"/>
+                <feature name="Ferienhaus"/>
+                <or name="Campingplatz">
+                    <feature name="Bungalow"/>
+                    <feature name="Stellplatz"/>
+                </or>
+            </or>
+            <feature mandatory="true" name="Suchleiste"/>
+            <feature name="Aktivität buchen"/>
+        </and>
+    </struct>
+    <constraints>
+        <rule>
+            <disj>
+                <var>Reise buchen</var>
+                <var>Unterkunft buchen</var>
+            </disj>
+        </rule>
+    </constraints>
+    <calculations Auto="true" Constraints="true" Features="true" Redundant="true" Tautology="true"/>
+    <comments/>
+    <featureOrder userDefined="false"/>
+</featureModel>
