@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<featureModel>
+    <properties/>
+    <struct>
+        <and abstract="true" mandatory="true" name="BessererReiseplaner">
+            <or abstract="true" mandatory="true" name="Buchen">
+                <alt abstract="true" name="Unterkunft_buchen">
+                    <feature name="Hotel"/>
+                    <feature name="Ferienhaus"/>
+                    <or name="Campingplatz">
+                        <feature name="Bungalow"/>
+                        <feature name="Stellplatz"/>
+                    </or>
+                </alt>
+                <or abstract="true" name="Reise_buchen">
+                    <feature name="Kreuzfahrt"/>
+                    <feature name="Flug"/>
+                    <and name="Auto_mieten">
+                        <feature name="Route_planen"/>
+                    </and>
+                    <feature name="Busreise"/>
+                </or>
+            </or>
+            <feature mandatory="true" name="Suchleiste"/>
+            <feature name="Kniggetipps"/>
+            <feature name="Waehrungsrechner"/>
+            <feature name="Aktivitaet_buchen"/>
+            <alt abstract="true" mandatory="true" name="Zahlung">
+                <feature name="Kreditkarte"/>
+                <feature name="PayPal"/>
+                <feature name="GiroPay"/>
+            </alt>
+        </and>
+    </struct>
+    <constraints/>
+    <calculations Auto="true" Constraints="true" Features="true" Redundant="true" Tautology="true"/>
+    <comments/>
+    <featureOrder userDefined="true">
+        <feature name="Suchleiste"/>
+        <feature name="Route_planen"/>
+        <feature name="Kreditkarte"/>
+        <feature name="PayPal"/>
+        <feature name="GiroPay"/>
+        <feature name="Auto_mieten"/>
+        <feature name="Bungalow"/>
+        <feature name="Kreuzfahrt"/>
+        <feature name="Waehrungsrechner"/>
+        <feature name="Campingplatz"/>
+        <feature name="Busreise"/>
+        <feature name="Stellplatz"/>
+        <feature name="Ferienhaus"/>
+        <feature name="Kniggetipps"/>
+        <feature name="Aktivitaet_buchen"/>
+        <feature name="Flug"/>
+        <feature name="Hotel"/>
+    </featureOrder>
+</featureModel>

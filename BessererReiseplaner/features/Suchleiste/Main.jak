@@ -1,0 +1,11 @@
+/**
+ * TODO description
+ */
+public class Main {
+	public void print() {
+		System.out.println("Es wurde eine Suchleiste hinzugefuegt.");
+	}
+	public static void main(String[] args) {
+		new Main().print();
+	}
+}

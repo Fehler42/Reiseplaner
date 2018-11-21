@@ -1,0 +1,18 @@
+/**
+ * TODO description
+ */
+public refines class Main {
+	public void print() {
+		Super().print();
+		System.out.println("Es wurde ein Hotel gebucht");
+	}
+	
+//	public void hotel() {
+//		System.out.println("Hotel gebucht; geil");
+//	}
+	
+	public static void main(String[] args) {
+		Main main = new Main();
+		main.print();
+	}
+}

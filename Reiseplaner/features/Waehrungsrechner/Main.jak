@@ -2,13 +2,12 @@
  * Feature adds a Waehrungsrechner
  */ 
 public refines class Main {
-		public void print(){
-			Super().print();
-			System.out.print("Es wurde ein Waehrungsrechner hinzugefuegt.");
-		}
+	public void print(){
+		Super().print();
+		System.out.print("Es wurde ein Waehrungsrechner hinzugefuegt.");
+	}
 
-		public static void main(String[] args) {
-		   new Main().print();
-	   }
-	
+	public static void main(String[] args) {
+	   new Main().print();
+   }
 }

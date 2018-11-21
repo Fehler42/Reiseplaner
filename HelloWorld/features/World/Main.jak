@@ -1,0 +1,13 @@
+/**
+ * TODO description
+ */
+public refines class Main {
+	public void print() {
+		Super().print();
+		System.out.print("World");
+	}
+	
+	public static void main(String[] args) {
+		new Main().print();
+	}
+}

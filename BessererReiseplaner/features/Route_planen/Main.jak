@@ -1,0 +1,12 @@
+/**
+ * TODO description
+ */
+public refines class Main {
+	public void print() {
+		Super().print();
+		System.out.println("Es wurde eine Route zum Ziel geplant");
+	}
+	public static void main(String[] args) {
+		new Main().print();
+	}
+}
