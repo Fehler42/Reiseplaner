@@ -1,12 +1,12 @@
 /**
- * Feature adds a Searchbar
+ * TODO description
  */
-public class Suchleiste {
+public class Main {
 	public void print(){
 		System.out.print("Es wurde eine Suchleiste hinzugefuegt.");
 	}
 
    public static void main(String[] args) {
-	   new Suchleiste().print();
+	   new Main().print();
    }
 }

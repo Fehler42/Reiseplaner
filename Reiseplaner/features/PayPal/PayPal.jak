@@ -1,8 +1,9 @@
 /**
  * Feature enables Paypal
  */
-public class PayPalid print(){
-		System.out.print("Es wird mit PayPal gezahlt.");
+public class PayPal {
+	public void print(){
+		System.out.print("Es wird mit Paypal bezahlt.");
 	}
 
    public static void main(String[] args) {
