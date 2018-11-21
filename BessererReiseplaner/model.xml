@@ -4,14 +4,14 @@
     <struct>
         <and abstract="true" mandatory="true" name="BessererReiseplaner">
             <or abstract="true" mandatory="true" name="Buchen">
-                <alt abstract="true" name="Unterkunft_buchen">
+                <or abstract="true" name="Unterkunft_buchen">
                     <feature name="Hotel"/>
                     <feature name="Ferienhaus"/>
                     <or name="Campingplatz">
                         <feature name="Bungalow"/>
                         <feature name="Stellplatz"/>
                     </or>
-                </alt>
+                </or>
                 <or abstract="true" name="Reise_buchen">
                     <feature name="Kreuzfahrt"/>
                     <feature name="Flug"/>
