@@ -1,16 +1,14 @@
 /**
- * TODO description
- */
+ * Feature adds a Waehrungsrechner
+ */ 
 public refines class Main {
+		public void print(){
+			Super().print();
+			System.out.print("Es wurde ein Waehrungsrechner hinzugefuegt.");
+		}
 
-	/**
-	 * Feature adds a Waehrungsrechner
-	 */
-	public void print(){
-		System.out.print("Es wurde ein Waehrungsrechner hinzugefuegt.");
-	}
-
-	public static void main(String[] args) {
-	   new Waehrungsrechner().print();
-   }
+		public static void main(String[] args) {
+		   new Main().print();
+	   }
+	
 }
