@@ -1,0 +1,13 @@
+/**
+ * Book a bungalow
+ */
+public refines class Camping {
+	public void print(){
+		Super().print();
+		System.out.print(" Der Campingplatz ist ein Bungalow");
+	}
+
+   public static void main(String[] args) {
+	   new Camping().print();
+   }
+}

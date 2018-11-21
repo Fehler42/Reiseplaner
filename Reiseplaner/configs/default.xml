@@ -7,6 +7,6 @@
     <feature automatic="unselected" name="GiroPay"/>
     <feature automatic="selected" name="Suchleiste"/>
     <feature automatic="selected" name="Buchen"/>
-    <feature automatic="selected" manual="selected" name="Unterkunft buchen"/>
-    <feature manual="selected" name="Hotel buchen"/>
+    <feature automatic="selected" name="Unterkunft_buchen"/>
+    <feature manual="selected" name="Hotel_buchen"/>
 </configuration>

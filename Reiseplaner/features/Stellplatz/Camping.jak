@@ -1,0 +1,14 @@
+/**
+ * books a campingplatz which is also a Stellplatz
+ */
+public refines class Camping {
+
+	public void print(){
+		Super().print();
+		System.out.print(" Der Campingplatz ist ein Stellplatz");
+	}
+
+   public static void main(String[] args) {
+	   new Camping().print();
+   }
+}

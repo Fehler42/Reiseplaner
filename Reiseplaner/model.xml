@@ -3,6 +3,24 @@
     <properties/>
     <struct>
         <and abstract="true" mandatory="true" name="Reiseplaner">
+            <or abstract="true" mandatory="true" name="Buchen">
+                <or abstract="true" name="Unterkunft_buchen">
+                    <feature name="Hotel_buchen"/>
+                    <feature name="Ferienhaus"/>
+                    <or name="Campingplatz">
+                        <feature name="Bungalow"/>
+                        <feature name="Stellplatz"/>
+                    </or>
+                </or>
+                <or abstract="true" name="Reise_buchen">
+                    <feature name="Kreuzfahrt"/>
+                    <feature name="Flug"/>
+                    <and name="Auto_mieten">
+                        <feature name="Route_planen"/>
+                    </and>
+                    <feature name="Busreise"/>
+                </or>
+            </or>
             <feature name="Währungsrechner"/>
             <alt abstract="true" mandatory="true" name="Zahlung">
                 <feature name="Kreditkarte"/>
@@ -11,25 +29,7 @@
             </alt>
             <feature name="Kniggetipps"/>
             <feature mandatory="true" name="Suchleiste"/>
-            <feature name="Aktivität buchen"/>
-            <or abstract="true" mandatory="true" name="Buchen">
-                <or abstract="true" name="Unterkunft buchen">
-                    <feature name="Hotel buchen"/>
-                    <feature name="Ferienhaus"/>
-                    <or name="Campingplatz">
-                        <feature name="Bungalow"/>
-                        <feature name="Stellplatz"/>
-                    </or>
-                </or>
-                <or abstract="true" name="Reise buchen">
-                    <feature name="Kreuzfahrt"/>
-                    <feature name="Flug"/>
-                    <and name="Auto mieten">
-                        <feature name="Route planen"/>
-                    </and>
-                    <feature name="Busreise"/>
-                </or>
-            </or>
+            <feature name="Aktivitaet_buchen"/>
         </and>
     </struct>
     <constraints/>
