@@ -1,0 +1,12 @@
+/**
+ * Feature enables GiroPay
+ */
+public class GiroPay {
+	public void print(){
+		System.out.print("Es wird mit GiroPay bezahlt.");
+	}
+
+   public static void main(String[] args) {
+	   new GiroPay().print();
+   }
+}

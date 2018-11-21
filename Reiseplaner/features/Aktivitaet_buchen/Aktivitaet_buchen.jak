@@ -1,0 +1,12 @@
+/**
+ * Feature books a activity
+ */
+public class Aktivitaet_buchen {
+	public void print(){
+		System.out.print("Es wurde eine Aktivität gebucht.");
+	}
+
+   public static void main(String[] args) {
+	   new Aktivitaet_buchen().print();
+   }
+}

@@ -1,0 +1,12 @@
+/**
+ * Feature books a car
+ */
+public class Auto_mieten {
+	public void print(){
+		System.out.print("Es wurde ein Auto gemietet.");
+	}
+
+   public static void main(String[] args) {
+	   new Auto_mieten().print();
+   }
+}

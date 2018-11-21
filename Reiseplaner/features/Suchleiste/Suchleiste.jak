@@ -1,0 +1,12 @@
+/**
+ * Feature adds a Searchbar
+ */
+public class Suchleiste {
+	public void print(){
+		System.out.print("Es wurde eine Suchleiste hinzugefügt.");
+	}
+
+   public static void main(String[] args) {
+	   new Suchleiste().print();
+   }
+}

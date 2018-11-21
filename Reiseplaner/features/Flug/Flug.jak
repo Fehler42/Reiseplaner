@@ -1,0 +1,12 @@
+/**
+ * Feature books a flight trip
+ */
+public class Flug {
+	public void print(){
+		System.out.print("Es wurde ein Flug gebucht.");
+	}
+
+   public static void main(String[] args) {
+	   new Flug().print();
+   }
+}

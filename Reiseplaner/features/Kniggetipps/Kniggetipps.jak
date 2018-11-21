@@ -1,0 +1,12 @@
+/**
+ * Feature enables Kniggetipps
+ */
+public class Kniggetipps {
+	public void print(){
+		System.out.print("Es wurdeen Kniggetipps hinzugefügt.");
+	}
+
+   public static void main(String[] args) {
+	   new Kniggetipps().print();
+   }
+}

@@ -1,0 +1,12 @@
+/**
+ * Feature books a bus trip
+ */
+public class Busreise {
+	public void print(){
+		System.out.print("Es wurde eine Busreise gebucht.");
+	}
+
+   public static void main(String[] args) {
+	   new Busreise().print();
+   }
+}

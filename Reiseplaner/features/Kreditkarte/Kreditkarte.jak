@@ -1,0 +1,12 @@
+/**
+ * Feature enables Kreditkarte
+ */
+public class Kreditkarte {
+	public void print(){
+		System.out.print("Es wird mit Kreditkarte bezahlt.");
+	}
+
+   public static void main(String[] args) {
+	   new Kreditkarte().print();
+   }
+}

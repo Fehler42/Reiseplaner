@@ -1,0 +1,12 @@
+/**
+ * Feature adds a Waehrungsrechner
+ */
+public class Waehrungsrechner {
+	public void print(){
+		System.out.print("Es wurde ein Währungsrechner hinzugefügt.");
+	}
+
+   public static void main(String[] args) {
+	   new Waehrungsrechner().print();
+   }
+}

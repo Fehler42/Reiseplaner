@@ -1,0 +1,12 @@
+/**
+ * Feature books a Kreuzfahrt
+ */
+public class Kreuzfahrt {
+	public void print(){
+		System.out.print("Es wurde eine Kreuzfahrt gebucht.");
+	}
+
+   public static void main(String[] args) {
+	   new Kreuzfahrt().print();
+   }
+}
