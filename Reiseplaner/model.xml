@@ -21,7 +21,7 @@
                     <feature name="Busreise"/>
                 </or>
             </or>
-            <feature name="Währungsrechner"/>
+            <feature name="Waehrungsrechner"/>
             <alt abstract="true" mandatory="true" name="Zahlung">
                 <feature name="Kreditkarte"/>
                 <feature name="PayPal"/>

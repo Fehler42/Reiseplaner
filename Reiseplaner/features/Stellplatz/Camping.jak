@@ -5,7 +5,7 @@ public refines class Camping {
 
 	public void print(){
 		Super().print();
-		System.out.print(" Der Campingplatz ist ein Stellplatz");
+		System.out.print("Es wurde ein Stellplatz gebucht!");
 	}
 
    public static void main(String[] args) {
