@@ -1,0 +1,14 @@
+/**
+ * buchen feature which books a Ferienhaus
+ */
+ */
+public class Main {
+		public void print(){
+			System.out.print("Es wurde ein Ferienhaus gebucht");
+		}
+
+	   public static void main(String[] args) {
+		   new Main().print();
+	   }
+	}
+}
