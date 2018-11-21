@@ -4,6 +4,7 @@
     <struct>
         <and abstract="true" mandatory="true" name="Reiseplaner">
             <and abstract="true" mandatory="true" name="Basic">
+                <feature mandatory="true" name="Suchleiste"/>
                 <feature name="Aktivitaet_buchen"/>
                 <or abstract="true" mandatory="true" name="Buchen">
                     <or abstract="true" name="Unterkunft_buchen">
@@ -25,7 +26,6 @@
                 </or>
                 <feature name="Kniggetipps"/>
                 <feature mandatory="true" name="Waehrungsrechner"/>
-                <feature mandatory="true" name="Suchleiste"/>
                 <alt abstract="true" mandatory="true" name="Zahlung">
                     <feature name="Kreditkarte"/>
                     <feature name="PayPal"/>
