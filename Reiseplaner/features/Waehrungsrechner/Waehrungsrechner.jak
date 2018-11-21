@@ -3,7 +3,7 @@
  */
 public class Waehrungsrechner {
 	public void print(){
-		System.out.print("Es wurde ein Währungsrechner hinzugefügt.");
+		System.out.print("Es wurde ein Waehrungsrechner hinzugefuegt.");
 	}
 
    public static void main(String[] args) {
