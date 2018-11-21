@@ -3,6 +3,7 @@
     <properties/>
     <struct>
         <and abstract="true" mandatory="true" name="BessererReiseplaner">
+            <feature mandatory="true" name="Suchleiste"/>
             <or abstract="true" mandatory="true" name="Buchen">
                 <or abstract="true" name="Unterkunft_buchen">
                     <feature name="Hotel"/>
@@ -21,7 +22,6 @@
                     <feature name="Busreise"/>
                 </or>
             </or>
-            <feature mandatory="true" name="Suchleiste"/>
             <feature name="Kniggetipps"/>
             <feature name="Waehrungsrechner"/>
             <feature name="Aktivitaet_buchen"/>
