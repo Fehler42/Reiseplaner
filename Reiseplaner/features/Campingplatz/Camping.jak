@@ -1,0 +1,12 @@
+/**
+ * Feature books a camping trip
+ */
+public class Camping {
+	public void print(){
+		System.out.print("Es wurde ein Campingplatz gebucht.");
+	}
+
+   public static void main(String[] args) {
+	   new Camping().print();
+   }
+}

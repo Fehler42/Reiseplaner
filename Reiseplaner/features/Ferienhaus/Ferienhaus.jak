@@ -1,0 +1,12 @@
+/**
+ * book a Ferienhaus
+ */
+public class Ferienhaus {
+	public void print(){
+		System.out.print("Es wurde ein Ferienhaus gebucht.");
+	}
+
+   public static void main(String[] args) {
+	   new Ferienhaus().print();
+   }
+}

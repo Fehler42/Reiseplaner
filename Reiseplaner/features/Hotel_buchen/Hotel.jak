@@ -1,0 +1,12 @@
+/**
+ * book a hotel
+ */
+public class Hotel {
+	public void print(){
+		System.out.print("Es wurde ein Hotel gebucht.");
+	}
+
+   public static void main(String[] args) {
+	   new Hotel().print();
+   }
+}
