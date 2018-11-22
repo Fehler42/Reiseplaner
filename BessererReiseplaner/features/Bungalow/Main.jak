@@ -4,7 +4,7 @@
 public refines class Main {
 	public void print() {
 		Super().print();
-		System.out.println("Es wurde ein Bungalow gebucht");
+		System.out.println("Das Feature Bungalow wurde aktiviert.");
 	}
 	
 	public static void main(String[] args) {

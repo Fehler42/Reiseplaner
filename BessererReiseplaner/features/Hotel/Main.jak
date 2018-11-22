@@ -4,7 +4,7 @@
 public refines class Main {
 	public void print() {
 		Super().print();
-		System.out.println("Es wurde ein Hotel gebucht");
+		System.out.println("Das Feature Hotel wurde aktiviert.");
 	}
 	
 //	public void hotel() {

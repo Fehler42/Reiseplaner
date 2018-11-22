@@ -3,7 +3,7 @@
  */
 public class Main {
 	public void print() {
-		System.out.println("Es wurde eine Suchleiste hinzugefuegt.");
+		System.out.println("Das Feature Suchleiste wurde aktiviert.");
 	}
 	public static void main(String[] args) {
 		new Main().print();

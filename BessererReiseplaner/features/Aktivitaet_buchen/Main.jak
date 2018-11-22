@@ -4,7 +4,7 @@
 public refines class Main {
 	public void print() {
 		Super().print();
-		System.out.println("Es wurde eine Aktivitaet gebucht");
+		System.out.println("Das Feature Aktivitaet_buchen wurde aktiviert.");
 	}
 	
 	public static void main(String[] args) {

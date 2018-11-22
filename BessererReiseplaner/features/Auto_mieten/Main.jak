@@ -4,7 +4,7 @@
 public refines class Main {
 	public void print() {
 		Super().print();
-		System.out.println("Es wurde ein Auto gemietet");
+		System.out.println("Das Feature Auto_mieten wurde aktiviert.");
 	}
 	
 	public static void main(String[] args) {

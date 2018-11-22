@@ -4,7 +4,7 @@
 public refines class Main {
 	public void print() {
 		Super().print();
-		System.out.println("Es wurde eine Busreise gebucht");
+		System.out.println("Das Feature Busreise wurde aktiviert.");
 	}
 	
 	public static void main(String[] args) {

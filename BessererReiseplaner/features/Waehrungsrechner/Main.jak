@@ -4,7 +4,7 @@
 public refines class Main {
 	public void print() {
 		Super().print();
-		System.out.println("Es wurde ein Waehrungsrechner hinzugefuegt");
+		System.out.println("Das Feature Waehrungsrechner wurde aktiviert.");
 	}
 	public static void main(String[] args) {
 		new Main().print();

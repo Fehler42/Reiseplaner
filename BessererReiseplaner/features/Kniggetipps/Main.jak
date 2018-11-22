@@ -4,7 +4,7 @@
 public refines class Main {
 	public void print() {
 		Super().print();
-		System.out.println("Es wurden Kniggetipps hinzugefuegt");
+		System.out.println("Das Feature Kniggetipps wurde aktiviert.");
 	}
 	public static void main(String[] args) {
 		new Main().print();

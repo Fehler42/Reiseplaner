@@ -5,7 +5,7 @@ public refines class Main {
 
 	public void print() {
 		Super().print();
-		System.out.println("Es wurde mit GiroPay gezahlt");
+		System.out.println("Das Feature GiroPay wurde aktiviert.");
 	}
 	public static void main(String[] args) {
 		new Main().print();
