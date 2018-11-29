@@ -3,33 +3,35 @@
     <properties/>
     <struct>
         <and abstract="true" mandatory="true" name="BessererReiseplaner">
-            <feature mandatory="true" name="Suchleiste"/>
-            <or abstract="true" mandatory="true" name="Buchen">
-                <or abstract="true" name="Unterkunft_buchen">
-                    <feature name="Hotel"/>
-                    <feature name="Ferienhaus"/>
-                    <or name="Campingplatz">
-                        <feature name="Bungalow"/>
-                        <feature name="Stellplatz"/>
+            <and mandatory="true" name="Base">
+                <feature mandatory="true" name="Suchleiste"/>
+                <feature name="Kniggetipps"/>
+                <or abstract="true" mandatory="true" name="Buchen">
+                    <or abstract="true" name="Unterkunft_buchen">
+                        <feature name="Hotel"/>
+                        <feature name="Ferienhaus"/>
+                        <or name="Campingplatz">
+                            <feature name="Bungalow"/>
+                            <feature name="Stellplatz"/>
+                        </or>
+                    </or>
+                    <or abstract="true" name="Reise_buchen">
+                        <feature name="Kreuzfahrt"/>
+                        <feature name="Flug"/>
+                        <and name="Auto_mieten">
+                            <feature name="Route_planen"/>
+                        </and>
+                        <feature name="Busreise"/>
                     </or>
                 </or>
-                <or abstract="true" name="Reise_buchen">
-                    <feature name="Kreuzfahrt"/>
-                    <feature name="Flug"/>
-                    <and name="Auto_mieten">
-                        <feature name="Route_planen"/>
-                    </and>
-                    <feature name="Busreise"/>
-                </or>
-            </or>
-            <feature name="Kniggetipps"/>
-            <feature name="Waehrungsrechner"/>
-            <feature name="Aktivitaet_buchen"/>
-            <alt abstract="true" mandatory="true" name="Zahlung">
-                <feature name="Kreditkarte"/>
-                <feature name="PayPal"/>
-                <feature name="GiroPay"/>
-            </alt>
+                <alt abstract="true" mandatory="true" name="Zahlung">
+                    <feature name="Kreditkarte"/>
+                    <feature name="PayPal"/>
+                    <feature name="GiroPay"/>
+                </alt>
+                <feature name="Aktivitaet_buchen"/>
+                <feature name="Waehrungsrechner"/>
+            </and>
         </and>
     </struct>
     <constraints/>
