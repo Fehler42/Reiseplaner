@@ -16,13 +16,12 @@ public class BessereMain extends JPanel {
 		      
 		      Font font = new Font("Serif", Font.PLAIN, 96);
 		      g2.setFont(font);
-		      g2.drawString("Text", 40, 120);
 		   }
 	
 	   public static void main(String[] args) {
 		      JFrame f = new JFrame();
 		      f.getContentPane().add(new BessereMain());
-		      f.setSize(300, 200);
+		      f.setSize(800, 600);
 		      f.setVisible(true);
 		      f.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
 	}

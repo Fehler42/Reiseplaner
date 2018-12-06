@@ -1,0 +1,10 @@
+/**
+ * TODO description
+ */
+public refines class BessereMain {
+   public void paint(Graphics g) {
+	   Super().paint(g);   
+	   Graphics2D g2 = (Graphics2D) g;
+	   g2.drawString("Textbeispiel", 40, 120);
+   }
+}
