@@ -1,4 +1,8 @@
 
+import javax.swing.border.Border;
+import java.awt.Color;
+
+import javax.swing.BorderFactory;
 import java.awt.*;
 import javax.swing.*;
 import javax.swing.border.EmptyBorder;
@@ -14,7 +18,8 @@ public class BessereMain extends JFrame {
 		setBounds(100, 100, 450, 300);
 		contentPane = new JPanel();
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
-		contentPane.setLayout(new BorderLayout(0, 0));
+		contentPane.add(cards);
+		contentPane.setBorder(BorderFactory.createLineBorder(Color.blue));
 		setContentPane(contentPane);
 	}
 

@@ -1,5 +1,13 @@
 
+import java.awt.BorderLayout;
+import java.awt.Color;
+import java.awt.Dimension;
+import java.*;
+
+import javax.swing.BorderFactory;
+import javax.swing.border.Border;
 import javax.swing.JPanel;
+import javax.swing.JTextField;
 
 /**
  * TODO description
@@ -16,10 +24,26 @@ public refines class BessereMain {
    
    public void suchFeld() {
 	   JPanel suchCard = new JPanel();
+	   suchCard.setLayout(new BorderLayout());
+	   suchCard.setPreferredSize(new Dimension(300,100));
+	   suchCard.setLocation(100, 0);
+	 
 	   
-	   suchfeld = new JTextField("suchTest");
-	   suchCard.add(suchfeld);
-	   contentPane.add(suchfeld);
+	   JPanel temp = new JPanel();
+	
+
+	   
+
+
+	   suchfeld = new JTextField("test");
+	   
+	   suchfeld.setPreferredSize(new Dimension(50,20));
+ 
+	   //temp.add(suchfeld,BorderLayout.EAST); 
+	   suchCard.setBorder(BorderFactory.createLineBorder(Color.red));
+	   suchCard.add(temp, BorderLayout.SOUTH);
+	   suchCard.add(suchfeld,BorderLayout.NORTH);
+	   contentPane.add(suchCard);
 	   cards.add(suchCard, "Suchfeld");
    }
 }
