@@ -12,14 +12,14 @@ public refines class BessereMain {
 	   g2.drawString("JAAAAAAAAAAAAAA", 40, 120);
    }*/
    
-   private JLabel suchfeld;
+   private JTextField suchfeld;
    
    public void suchFeld() {
 	   JPanel suchCard = new JPanel();
 	   
-	   suchfeld = new JLabel("suchTest");
+	   suchfeld = new JTextField("suchTest");
 	   suchCard.add(suchfeld);
-	   contentPane.add(suchCard);
+	   contentPane.add(suchfeld);
 	   cards.add(suchCard, "Suchfeld");
    }
 }
