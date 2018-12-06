@@ -1,10 +1,25 @@
+
+import javax.swing.JPanel;
+
 /**
  * TODO description
  */
 public refines class BessereMain {
-   public void paint(Graphics g) {
+	private static final long serialVersionUID = 1L;
+  /* public void paint(Graphics g) {
 	   Super().paint(g);   
 	   Graphics2D g2 = (Graphics2D) g;
-	   g2.drawString("Textbeispiel", 40, 120);
+	   g2.drawString("JAAAAAAAAAAAAAA", 40, 120);
+   }*/
+   
+   private JLabel suchfeld;
+   
+   public void suchFeld() {
+	   JPanel suchCard = new JPanel();
+	   
+	   suchfeld = new JLabel("suchTest");
+	   suchCard.add(suchfeld);
+	   contentPane.add(suchCard);
+	   cards.add(suchCard, "Suchfeld");
    }
 }
