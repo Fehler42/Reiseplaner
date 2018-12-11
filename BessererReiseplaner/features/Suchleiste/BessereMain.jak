@@ -5,45 +5,43 @@ import java.awt.Dimension;
 import java.*;
 
 import javax.swing.BorderFactory;
+import javax.swing.Box;
+import javax.swing.JButton;
+import javax.swing.JLabel;
 import javax.swing.border.Border;
 import javax.swing.JPanel;
 import javax.swing.JTextField;
+import javax.swing.SwingConstants;
 
 /**
- * TODO description
+ * Suchleiste is a simple TextField which is featured at the top of the page
  */
 public refines class BessereMain {
 	private static final long serialVersionUID = 1L;
-  /* public void paint(Graphics g) {
-	   Super().paint(g);   
-	   Graphics2D g2 = (Graphics2D) g;
-	   g2.drawString("JAAAAAAAAAAAAAA", 40, 120);
-   }*/
    
    private JTextField suchfeld;
    
-   public void suchFeld() {
-	   JPanel suchCard = new JPanel();
-	   suchCard.setLayout(new BorderLayout());
-	   suchCard.setPreferredSize(new Dimension(300,100));
-	   suchCard.setLocation(100, 0);
-	 
+   
+   public void design() {
+	   Super().design();
 	   
-	   JPanel temp = new JPanel();
-	
-
+	   //textfield description and action button
+	   JButton btnSearch = new JButton("Suche"); //TODO: display ((((Search Results, when button is clicked))))
 	   
-
-
-	   suchfeld = new JTextField("test");
+	   //crete a sort of box for textfield + button to be able to search stuff
+	   suchfeld = new JTextField("");
 	   
-	   suchfeld.setPreferredSize(new Dimension(50,20));
- 
-	   //temp.add(suchfeld,BorderLayout.EAST); 
-	   suchCard.setBorder(BorderFactory.createLineBorder(Color.red));
-	   suchCard.add(temp, BorderLayout.SOUTH);
-	   suchCard.add(suchfeld,BorderLayout.NORTH);
-	   contentPane.add(suchCard);
-	   cards.add(suchCard, "Suchfeld");
+	   //Hokus Pokus, just hope that our panel here got added first ...
+	   JPanel upper = (JPanel) mainPage.getComponent(0);
+	   
+	   //filler content
+	   Dimension minSize = new Dimension(50, 30);
+	   Dimension prefSize = new Dimension(400, 30);
+	   Dimension maxSize = new Dimension(600, 30);
+	   
+	   //add everything to the grid layout
+	   upper.add(new Box.Filler(minSize, prefSize, maxSize));
+	   upper.add(btnSearch);
+	   upper.add(suchfeld);
    }
 }

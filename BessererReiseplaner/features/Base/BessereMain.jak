@@ -1,26 +1,55 @@
 
 import javax.swing.border.Border;
-import java.awt.Color;
 
-import javax.swing.BorderFactory;
 import java.awt.*;
 import javax.swing.*;
 import javax.swing.border.EmptyBorder;
 
 public class BessereMain extends JFrame {
 	private static final long serialVersionUID = 1L;
-	public JPanel contentPane;
-	CardLayout cardLayout = new CardLayout();
-	JPanel cards = new JPanel(cardLayout);
+	
+	//GUI design stuff
+	public JPanel masterPanel;
+	public JPanel mainPage;
+	CardLayout cardLayout;
 
+	//CardLayout page names
+	public static final String PAGE_MAIN = "MAIN";
 	public BessereMain() {
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		setBounds(100, 100, 450, 300);
-		contentPane = new JPanel();
-		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
-		contentPane.add(cards);
-		contentPane.setBorder(BorderFactory.createLineBorder(Color.blue));
-		setContentPane(contentPane);
+		
+		//startpositions x, y && window width, height
+		setBounds(100, 100, 800, 600);
+		masterPanel = new JPanel();
+		cardLayout = new CardLayout();
+		masterPanel.setLayout(cardLayout);
+		
+		//debug stuff
+		masterPanel.setBorder(new EmptyBorder(5, 5, 5, 5));
+		masterPanel.setBorder(BorderFactory.createLineBorder(Color.blue));
+		
+		//finish masterPanel here
+		setContentPane(masterPanel);
+	}
+	
+	/**
+	 * Idea: Each base feature creates their own card page and the refining features add to those cards
+	 */
+	public void design() {
+		mainPage = new JPanel();
+		mainPage.setLayout(new BorderLayout());
+		
+		//Upperwindow contains SuchLeiste
+		JPanel upperWindow = new JPanel();
+		upperWindow.setLayout(new BoxLayout(upperWindow, BoxLayout.X_AXIS)); //so far this gives the least headache
+		mainPage.add(upperWindow, BorderLayout.NORTH);
+		
+		//centerPanel contains buttons to book stuff
+		JPanel centerPanel = new JPanel(new FlowLayout()); //dynamic layout 
+		mainPage.add(centerPanel, BorderLayout.CENTER);
+		
+		masterPanel.add(mainPage, PAGE_MAIN);
+		//TODO: When all is done, show main page
 	}
 
 	public static void main(String[] args) {
@@ -29,7 +58,7 @@ public class BessereMain extends JFrame {
 			@Override
 			public void run() {
 				BessereMain pTest = new BessereMain();
-				pTest.suchFeld();
+				pTest.design();
 				pTest.setVisible(true);
 				
 			}
