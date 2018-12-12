@@ -11,10 +11,12 @@ public class BessereMain extends JFrame {
 	//GUI design stuff
 	public JPanel masterPanel;
 	public JPanel mainPage;
+	public JPanel payPage;
 	CardLayout cardLayout;
 
 	//CardLayout page names
 	public static final String PAGE_MAIN = "MAIN";
+	public static final String PAGE_PAY = "PAY";
 	public BessereMain() {
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		
@@ -39,6 +41,8 @@ public class BessereMain extends JFrame {
 		mainPage = new JPanel();
 		mainPage.setLayout(new BorderLayout());
 		
+		payPage = new JPanel(new BorderLayout());
+		
 		//Upperwindow contains SuchLeiste
 		JPanel upperWindow = new JPanel();
 		upperWindow.setLayout(new BoxLayout(upperWindow, BoxLayout.X_AXIS)); //so far this gives the least headache
@@ -49,6 +53,9 @@ public class BessereMain extends JFrame {
 		mainPage.add(centerPanel, BorderLayout.CENTER);
 		
 		masterPanel.add(mainPage, PAGE_MAIN);
+		masterPanel.add(payPage, PAGE_PAY);
+		
+		cardLayout.show(masterPanel, PAGE_MAIN);
 		//TODO: When all is done, show main page
 	}
 

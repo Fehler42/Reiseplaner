@@ -72,14 +72,13 @@ public refines class BessereMain {
         });
         
     	list.addListSelectionListener(new ListSelectionListener() {
-            
     		@Override
             public void valueChanged(ListSelectionEvent evt) {
                 listValueChanged(evt);
             }
         });
         
-    	hotelPage.add(list, BorderLayout.CENTER);
+    	hotelPage.add(list, BorderLayout.NORTH);
 	}	
 	
     private void listValueChanged(javax.swing.event.ListSelectionEvent evt) {
@@ -87,6 +86,7 @@ public refines class BessereMain {
         String s = (String) list.getSelectedValue();
         switch(s) {
         default:
+        	cardLayout.show(masterPanel, PAGE_PAY);
         	break;
         }
     }
