@@ -7,26 +7,22 @@
                 <feature mandatory="true" name="Suchleiste"/>
                 <feature name="Kniggetipps"/>
                 <or abstract="true" mandatory="true" name="Buchen">
-                    <and abstract="true" name="Unterkunft_buchen">
-                        <or mandatory="true" name="Unterkunft_buchen_base">
-                            <feature name="Hotel"/>
-                            <feature name="Ferienhaus"/>
-                            <or name="Campingplatz">
-                                <feature name="Bungalow"/>
-                                <feature name="Stellplatz"/>
-                            </or>
+                    <or name="Unterkunft_buchen_base">
+                        <feature name="Hotel"/>
+                        <feature name="Ferienhaus"/>
+                        <or name="Campingplatz">
+                            <feature name="Bungalow"/>
+                            <feature name="Stellplatz"/>
                         </or>
-                    </and>
-                    <and abstract="true" name="Reise_buchen">
-                        <or mandatory="true" name="Reise_buchen_base">
-                            <feature name="Busreise"/>
-                            <and name="Auto_mieten">
-                                <feature name="Route_planen"/>
-                            </and>
-                            <feature name="Flug"/>
-                            <feature name="Kreuzfahrt"/>
-                        </or>
-                    </and>
+                    </or>
+                    <or name="Reise_buchen_base">
+                        <feature name="Busreise"/>
+                        <and name="Auto_mieten">
+                            <feature name="Route_planen"/>
+                        </and>
+                        <feature name="Flug"/>
+                        <feature name="Kreuzfahrt"/>
+                    </or>
                 </or>
                 <alt abstract="true" mandatory="true" name="Zahlung">
                     <feature name="Kreditkarte"/>
