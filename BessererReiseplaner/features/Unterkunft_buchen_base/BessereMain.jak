@@ -2,6 +2,7 @@
 import java.awt.BorderLayout;
 import java.awt.Color;
 import java.awt.Dimension;
+import java.awt.event.*;
 import java.*;
 
 import javax.swing.BorderFactory;
@@ -18,6 +19,8 @@ import javax.swing.SwingConstants;
  */
 public refines class BessereMain {
 	private static final long serialVersionUID = 1L;
+	public JPanel unterkunftPage;
+	public static final String PAGE_UNTERKUNFT = "UNTERKUNFT";
 	
 	public void design() {
 		Super().design();
@@ -29,5 +32,17 @@ public refines class BessereMain {
 		btnBookResort.setPreferredSize(new Dimension(200, 300));
 		
 		center.add(btnBookResort);
+		
+		//Start new Panel page here
+		unterkunftPage = new JPanel(new BorderLayout());
+		
+		masterPanel.add(unterkunftPage, PAGE_UNTERKUNFT);
+		
+		//Button click switches Panel
+		btnBookResort.addActionListener(new ActionListener() {
+		    public void actionPerformed (ActionEvent event) {
+		    	cardLayout.show(masterPanel, PAGE_UNTERKUNFT);
+		    }
+		} );
 	}
 }
