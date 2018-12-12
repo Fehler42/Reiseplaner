@@ -27,7 +27,6 @@ public refines class BessereMain {
 		
 		JPanel center = (JPanel) mainPage.getComponent(1);
 		
-		//TODO: add actionlistener to change page
 		JButton btnBookResort = new JButton("Eine Unterkunft buchen");
 		btnBookResort.setPreferredSize(new Dimension(200, 300));
 		
@@ -35,6 +34,8 @@ public refines class BessereMain {
 		
 		//Start new Panel page here
 		unterkunftPage = new JPanel(new BorderLayout());
+		JPanel resorts = new JPanel(new FlowLayout());
+		unterkunftPage.add(resorts, BorderLayout.CENTER);
 		
 		masterPanel.add(unterkunftPage, PAGE_UNTERKUNFT);
 		

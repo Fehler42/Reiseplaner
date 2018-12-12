@@ -1,0 +1,95 @@
+
+import java.awt.BorderLayout;
+import java.awt.Color;
+import java.awt.Dimension;
+import java.awt.event.*;
+import java.*;
+import javax.swing.event.ListSelectionEvent;
+import javax.swing.event.ListSelectionListener;
+
+import javax.swing.BorderFactory;
+import javax.swing.Box;
+import javax.swing.JButton;
+import javax.swing.JLabel;
+import javax.swing.border.Border;
+import javax.swing.JPanel;
+import javax.swing.JTextField;
+import javax.swing.SwingConstants;
+
+/**
+ * feature to book different hotels
+ */
+public refines class BessereMain {
+	private static final long serialVersionUID = 1L;
+
+	public static final String PAGE_HOTELS = "HOTELS";
+	public JPanel hotelPage;
+	
+	private JList list;
+	
+	public void design() {
+		Super().design();
+		
+		JButton btnBookHotel = new JButton("Hotel buchen");
+		btnBookHotel.setPreferredSize(new Dimension(200, 300));
+		
+		JPanel resortPanel = (JPanel) unterkunftPage.getComponent(0);
+		
+		resortPanel.add(btnBookHotel);
+		
+		//Start new Panel page here
+		hotelPage = new JPanel(new BorderLayout());
+		
+		listHotels();
+		
+		masterPanel.add(hotelPage, PAGE_HOTELS);
+		
+		//Button click switches Panel
+		btnBookHotel.addActionListener(new ActionListener() {
+		    public void actionPerformed (ActionEvent event) {
+		    	cardLayout.show(masterPanel, PAGE_HOTELS);
+		    }
+		} );
+	}
+	
+	public void listHotels() {
+		
+		list = new JList();
+
+        list.setModel(new AbstractListModel() {
+
+        	String[] hotels = { "Billiges Hotel", "Nicht so billiges Hotel", "teures Hotel", "Super-Mega-Hammer-Ultra-Deluxe Hotel"};
+
+            @Override
+            public int getSize() {
+                return hotels.length;
+            }
+
+            @Override
+            public Object getElementAt(int i) {
+                return hotels[i];
+            }
+        });
+        
+    	list.addListSelectionListener(new ListSelectionListener() {
+            
+    		@Override
+            public void valueChanged(ListSelectionEvent evt) {
+                listValueChanged(evt);
+            }
+        });
+        
+    	hotelPage.add(list, BorderLayout.CENTER);
+	}	
+	
+    private void listValueChanged(javax.swing.event.ListSelectionEvent evt) {
+        //set text on right here
+        String s = (String) list.getSelectedValue();
+        switch(s) {
+        default:
+        	break;
+        }
+    }
+
+	
+}
