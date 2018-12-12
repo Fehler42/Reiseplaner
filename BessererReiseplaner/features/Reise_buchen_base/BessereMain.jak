@@ -18,17 +18,28 @@ import javax.swing.SwingConstants;
  */
 public refines class BessereMain {
 	private static final long serialVersionUID = 1L;
+	public static final String PAGE_REISE = "REISE";
 	
 	public void design() {
 		Super().design();
 		
 		JPanel center = (JPanel) mainPage.getComponent(1);
 		
-		//TODO: add actionlistener to change page
+		JPanel aktivitaet_buchen = new JPanel();
+		aktivitaet_buchen.setLayout(new BorderLayout());
+		masterPanel.add(reise_buchen, PAGE_REISE);
+		
 		JButton btnBookResort = new JButton("Eine Reise buchen");
 		btnBookResort.setPreferredSize(new Dimension(200, 300));
 		
 		center.add(btnBookResort);
+		
+		//Button click switches Panel
+		btnBookResort.addActionListener(new ActionListener() { 
+			  public void actionPerformed(ActionEvent e) { 
+				  cardLayout.show(masterPanel,PAGE_REISE);
+			  } 
+			} );
 	}
 
 }
