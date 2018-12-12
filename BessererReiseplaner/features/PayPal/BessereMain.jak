@@ -1,0 +1,38 @@
+
+import java.awt.BorderLayout;
+import java.awt.Color;
+import java.awt.Dimension;
+import java.awt.event.*;
+import java.*;
+
+import javax.swing.BorderFactory;
+import javax.swing.Box;
+import javax.swing.JButton;
+import javax.swing.JLabel;
+import javax.swing.border.Border;
+import javax.swing.JPanel;
+import javax.swing.JTextField;
+import javax.swing.SwingConstants;
+import java.awt.event.*;
+
+/**
+ * Sets the base for all the following book options
+ */
+public refines class BessereMain {
+	private static final long serialVersionUID = 1L;
+	
+	public void design() {
+		Super().design();
+		
+		JButton btnPayPaypal = new JButton("Bezahlen mit Paypal");
+		
+		//Button click switches Panel
+		btnPayPaypal.addActionListener(new ActionListener() {
+		    public void actionPerformed (ActionEvent event) {
+		    	cardLayout.show(masterPanel, PAGE_MAIN);
+		    }
+		} );
+		
+		payPage.add(btnPayPaypal, BorderLayout.CENTER);
+	}
+}
