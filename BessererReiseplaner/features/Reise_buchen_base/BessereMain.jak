@@ -12,6 +12,7 @@ import javax.swing.border.Border;
 import javax.swing.JPanel;
 import javax.swing.JTextField;
 import javax.swing.SwingConstants;
+import java.awt.event.*;
 
 /**
  * TODO base class for the trip thingies
@@ -25,8 +26,8 @@ public refines class BessereMain {
 		
 		JPanel center = (JPanel) mainPage.getComponent(1);
 		
-		JPanel aktivitaet_buchen = new JPanel();
-		aktivitaet_buchen.setLayout(new BorderLayout());
+		JPanel reise_buchen = new JPanel();
+		reise_buchen.setLayout(new BorderLayout());
 		masterPanel.add(reise_buchen, PAGE_REISE);
 		
 		JButton btnBookResort = new JButton("Eine Reise buchen");

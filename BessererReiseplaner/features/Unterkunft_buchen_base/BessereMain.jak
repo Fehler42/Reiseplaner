@@ -13,6 +13,7 @@ import javax.swing.border.Border;
 import javax.swing.JPanel;
 import javax.swing.JTextField;
 import javax.swing.SwingConstants;
+import java.awt.event.*;
 
 /**
  * Sets the base for all the following book options
