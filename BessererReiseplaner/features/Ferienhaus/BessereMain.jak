@@ -1,0 +1,95 @@
+
+import java.awt.BorderLayout;
+import java.awt.Color;
+import java.awt.Dimension;
+import java.awt.event.*;
+import java.*;
+import javax.swing.event.ListSelectionEvent;
+import javax.swing.event.ListSelectionListener;
+
+import javax.swing.BorderFactory;
+import javax.swing.Box;
+import javax.swing.JButton;
+import javax.swing.JLabel;
+import javax.swing.border.Border;
+import javax.swing.JPanel;
+import javax.swing.JTextField;
+import javax.swing.SwingConstants;
+
+/**
+ * feature to book different ferienhaeuser
+ */
+public refines class BessereMain {
+	private static final long serialVersionUID = 1L;
+
+	public static final String PAGE_FERIENHAUS = "FERIENHAUS";
+	public JPanel ferienPage;
+	
+	private JList list;
+	
+	public void design() {
+		Super().design();
+		
+		JButton btnBookFerienhaus = new JButton("Ferienhaus buchen");
+		btnBookFerienhaus.setPreferredSize(new Dimension(200, 300));
+		
+		JPanel resortPanel = (JPanel) unterkunftPage.getComponent(0);
+		
+		resortPanel.add(btnBookFerienhaus);
+		
+		//Start new Panel page here
+		ferienPage = new JPanel(new BorderLayout());
+		
+		listFerienhaus();
+		
+		masterPanel.add(ferienPage, PAGE_FERIENHAUS);
+		
+		//Button click switches Panel
+		btnBookFerienhaus.addActionListener(new ActionListener() {
+		    public void actionPerformed (ActionEvent event) {
+		    	cardLayout.show(masterPanel, PAGE_FERIENHAUS);
+		    }
+		} );
+	}
+	
+	public void listFerienhaus() {
+		
+		list = new JList();
+
+        list.setModel(new AbstractListModel() {
+
+        	String[] ferienhaeuser = { "Billiges Ferienhaus", "Nicht so billiges Ferienhaus", "teures Ferienhaus", "Super-Mega-Hammer-Ultra-Deluxe Ferienhaus"};
+
+            @Override
+            public int getSize() {
+                return ferienhaeuser.length;
+            }
+
+            @Override
+            public Object getElementAt(int i) {
+                return ferienhaeuser[i];
+            }
+        });
+        
+    	list.addListSelectionListener(new ListSelectionListener() {
+            
+    		@Override
+            public void valueChanged(ListSelectionEvent evt) {
+                listValueChanged(evt);
+            }
+        });
+        
+    	ferienPage.add(list, BorderLayout.NORTH);
+	}	
+	
+    private void listValueChanged(javax.swing.event.ListSelectionEvent evt) {
+        //set text on right here
+        String s = (String) list.getSelectedValue();
+        switch(s) {
+        default:
+        	break;
+        }
+    }
+
+	
+}
