@@ -21,22 +21,23 @@ import java.awt.event.*;
 public refines class BessereMain {
 	private static final long serialVersionUID = 1L;
 	public static final String PAGE_AKTIVITAET = "AKTIVITAET";
+	public JPanel aktivitaet_buchen;
 	
 	public void design() {
 		Super().design();
 		
-		JPanel center = (JPanel) mainPage.getComponent(1);
+		JPanel center = (JPanel) mainPage.getComponent(1);		
 		
-		JPanel aktivitaet_buchen = new JPanel();
-		aktivitaet_buchen.setLayout(new BorderLayout());
-		masterPanel.add(aktivitaet_buchen, PAGE_AKTIVITAET);
-		
-		//TODO: add actionlistener to change page
 		JButton btnBookResort = new JButton("Eine Aktivitaet buchen");
 		btnBookResort.setPreferredSize(new Dimension(200, 300));
 		
 		center.add(btnBookResort);
 		
+		//Start new Panel page here
+		aktivitaet_buchen = new JPanel(new BorderLayout());
+		masterPanel.add(aktivitaet_buchen, PAGE_AKTIVITAET);
+		
+		//Button click switches Panel
 		btnBookResort.addActionListener(new ActionListener() { 
 		  public void actionPerformed(ActionEvent e) { 
 			  cardLayout.show(masterPanel,PAGE_AKTIVITAET);
