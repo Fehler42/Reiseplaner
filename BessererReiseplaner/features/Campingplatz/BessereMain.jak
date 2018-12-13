@@ -98,7 +98,7 @@ public refines class BessereMain {
     	
 	}	
 	
-    protected void listValueChanged(javax.swing.event.ListSelectionEvent evt) {
+    private void listValueChanged(javax.swing.event.ListSelectionEvent evt) {
         //set text on right here
         String s = (String) list.getSelectedValue();
         switch(s) {

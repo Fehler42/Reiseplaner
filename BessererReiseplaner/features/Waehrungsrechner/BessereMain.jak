@@ -1,0 +1,40 @@
+
+import java.awt.BorderLayout;
+import java.awt.Color;
+import java.awt.Dimension;
+import java.awt.event.*;
+import java.*;
+
+import javax.swing.BorderFactory;
+import javax.swing.Box;
+import javax.swing.JButton;
+import javax.swing.JLabel;
+import javax.swing.border.Border;
+import javax.swing.JPanel;
+import javax.swing.JTextField;
+import javax.swing.SwingConstants;
+import java.awt.event.*;
+
+/**
+ * enables a Währungsrechner
+ */
+public refines class BessereMain {
+	private static final long serialVersionUID = 1L;
+	
+	public void design() {
+		Super().design();
+		
+		JLabel euro = new JLabel("Euro");
+		JLabel dollar = new JLabel("Dollar");
+		JTextField entryEuro = new JTextField("1,00");
+		JTextField entryDollar = new JTextField("1,14");
+		JButton btnCalc = new JButton("Umrechnen");
+		
+		JPanel waehrungsPanel = (JPanel) payPage.getComponent(2);
+		waehrungsPanel.add(euro);
+		waehrungsPanel.add(entryEuro);
+		waehrungsPanel.add(dollar);
+		waehrungsPanel.add(entryDollar);
+		waehrungsPanel.add(btnCalc);
+	}
+}

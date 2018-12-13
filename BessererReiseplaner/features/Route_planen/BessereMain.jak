@@ -3,9 +3,10 @@
  */
 public refines class BessereMain {
 
-	protected void listValueChanged(javax.swing.event.ListSelectionEvent evt) {
-    	
-    	System.out.println("ok");
-    	Super().listValueChanged(evt);
-	}
+	//TODO: Needs to be ignored for now due to visibility problems for Auto_mieten
+//	protected void listValueChanged(javax.swing.event.ListSelectionEvent evt) {
+//    	
+//    	System.out.println("ok");
+//    	Super().listValueChanged(evt);
+//	}
 }
