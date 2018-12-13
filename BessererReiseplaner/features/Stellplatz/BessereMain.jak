@@ -82,7 +82,7 @@ public refines class BessereMain {
     	stellplatzPage.add(list, BorderLayout.NORTH);
 	}	
 	
-    protected void listValueChanged(javax.swing.event.ListSelectionEvent evt) {
+    private void listValueChanged(javax.swing.event.ListSelectionEvent evt) {
         //set text on right here
         final String s = (String) list.getSelectedValue();
         

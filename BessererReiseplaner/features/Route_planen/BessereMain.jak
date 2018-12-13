@@ -17,7 +17,7 @@ import javax.swing.JTextField;
 import javax.swing.SwingConstants;
 
 /**
- * feature to book different bungalows
+ * feature to plan different routes
  */
 public refines class BessereMain {
 	
@@ -27,13 +27,15 @@ public refines class BessereMain {
 	public static final String PAGE_ROUTE2 = "Route2";
 	public JPanel route2Page;
 	
-	public final String[] listEntries= { "Schnellste Route", "Kürzeste Route", "Schönste Route", "Keine AUtobahn"};
+	public final String[] listEntries= { "Schnellste Route", "Kürzeste Route", "Schönste Route", "Keine Autobahn"};
 	
 	private JList list;
 	
 	public void design() {
 		Super().design();
-		routeBool = true;
+		
+		setTrue();
+		
 		JButton btnBookRoute2 = new JButton("Route auswählen");
 		btnBookRoute2.setPreferredSize(new Dimension(200, 300));
 		
@@ -84,7 +86,7 @@ public refines class BessereMain {
     	route2Page.add(list, BorderLayout.NORTH);
 	}	
 	
-    protected void listValueChanged(javax.swing.event.ListSelectionEvent evt) {
+    private void listValueChanged(javax.swing.event.ListSelectionEvent evt) {
         //set text on right here
         final String s = (String) list.getSelectedValue();
         

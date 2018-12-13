@@ -46,6 +46,7 @@ class BessereMain {
 		
 		//Start new Panel page here
 		carPage = new JPanel(new FlowLayout());
+		routePage = new JPanel(new FlowLayout());
 		
 		listCar();
 		
@@ -87,9 +88,9 @@ class BessereMain {
     	carPage.add(list, BorderLayout.NORTH);
 	}	
 	
-    protected void listValueChanged(javax.swing.event.ListSelectionEvent evt) {
+    private void listValueChanged(javax.swing.event.ListSelectionEvent evt) {
     	
-    	if(routeBool == false) {
+    	if(isRoute == false) {
     		//set text on right here
     		final String s = (String) list.getSelectedValue();
         
@@ -104,8 +105,10 @@ class BessereMain {
     		
     		cardLayout.show(masterPanel, PAGE_PAY);
     	}
+    	else {
         
-        cardLayout.show(masterPanel, PAGE_Route);
+        cardLayout.show(masterPanel, PAGE_ROUTE);
+    	}
     }	
     		  
 }
