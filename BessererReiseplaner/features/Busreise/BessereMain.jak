@@ -25,6 +25,8 @@ public refines class BessereMain {
 	public static final String PAGE_BUS = "BUS";
 	public JPanel busPage;
 	
+	public final String[] listEntries = { "Billiger Bus", "Nicht so billiger Bus", "teurer Bus", "Super-Mega-Hammer-Ultra-Deluxe Bus"};
+	
 	private JList list;
 	
 	public void design() {
@@ -58,16 +60,14 @@ public refines class BessereMain {
 
         list.setModel(new AbstractListModel() {
 
-        	String[] bus = { "Billiger Bus", "Nicht so billiger Bus", "teurer Bus", "Super-Mega-Hammer-Ultra-Deluxe Bus"};
-
             @Override
             public int getSize() {
-                return bus.length;
+                return listEntries.length;
             }
 
             @Override
             public Object getElementAt(int i) {
-                return bus[i];
+                return listEntries[i];
             }
         });
         
@@ -83,12 +83,20 @@ public refines class BessereMain {
 	
     private void listValueChanged(javax.swing.event.ListSelectionEvent evt) {
         //set text on right here
-        String s = (String) list.getSelectedValue();
-        switch(s) {
-        default:
-        	cardLayout.show(masterPanel, PAGE_PAY);
-        	break;
+        final String s = (String) list.getSelectedValue();
+        
+        if(s.equals(listEntries[0]))
+        	updateText("30 Euro");
+        else if(s.equals(listEntries[1]))
+        	updateText("50 Euro");
+        else if(s.equals(listEntries[2]))
+        	updateText("100 Euro");
+        else if(s.equals(listEntries[3])) {
+        	updateText("300 Euro");
         }
+        
+        cardLayout.show(masterPanel, PAGE_PAY);
+        
     }
 
 	

@@ -17,48 +17,48 @@ import javax.swing.JTextField;
 import javax.swing.SwingConstants;
 
 /**
- * feature to book different bungalows
+ * feature to book different car
  */
 public refines class BessereMain {
 	private static final long serialVersionUID = 1L;
 
-	public static final String PAGE_BUNGALOW = "Bungalow";
-	public JPanel bungalowPage;
+	public static final String PAGE_CAR = "CAR";
+	public JPanel carPage;
 	
-	public final String[] listEntries= { "Billiger Bungalow", "Nicht so billiger Bungalow", "teurer Bungalow", "Super-Mega-Hammer-Ultra-Deluxe Bungalow"};
+	public final String[] listEntries = { "Billiges Auto", "Nicht so billiges Auto", "teures Auto", "Super-Mega-Hammer-Ultra-Deluxe Auto"};
 	
 	private JList list;
 	
 	public void design() {
 		Super().design();
 		
-		JButton btnBookBungalow = new JButton("Bungalow buchen");
-		btnBookBungalow.setPreferredSize(new Dimension(200, 300));
+		JButton btnBookCar = new JButton("Auto mieten");
+		btnBookCar.setPreferredSize(new Dimension(200, 300));
 		
-		campingChoosePage.add(btnBookBungalow);
+		JPanel jurneyPanel = (JPanel) reise_buchenPage.getComponent(0);
+		
+		jurneyPanel.add(btnBookCar);
 		
 		//Start new Panel page here
-		bungalowPage = new JPanel(new BorderLayout());
+		carPage = new JPanel(new BorderLayout());
 		
-		listBungalows();
+		listCar();
 		
-		masterPanel.add(bungalowPage, PAGE_BUNGALOW);
+		masterPanel.add(carPage, PAGE_CAR);
 		
 		//Button click switches Panel
-		btnBookBungalow.addActionListener(new ActionListener() {
+		btnBookCar.addActionListener(new ActionListener() {
 		    public void actionPerformed (ActionEvent event) {
-		    	cardLayout.show(masterPanel, PAGE_BUNGALOW);
+		    	cardLayout.show(masterPanel, PAGE_CAR);
 		    }
 		} );
 	}
 	
-	public void listBungalows() {
+	public void listCar() {
 		
 		list = new JList();
 
         list.setModel(new AbstractListModel() {
-
-        	
 
             @Override
             public int getSize() {
@@ -72,14 +72,13 @@ public refines class BessereMain {
         });
         
     	list.addListSelectionListener(new ListSelectionListener() {
-            
     		@Override
             public void valueChanged(ListSelectionEvent evt) {
                 listValueChanged(evt);
             }
         });
         
-    	bungalowPage.add(list, BorderLayout.NORTH);
+    	carPage.add(list, BorderLayout.NORTH);
 	}	
 	
     private void listValueChanged(javax.swing.event.ListSelectionEvent evt) {
@@ -97,6 +96,7 @@ public refines class BessereMain {
         }
         
         cardLayout.show(masterPanel, PAGE_PAY);
+        
     }
 
 	

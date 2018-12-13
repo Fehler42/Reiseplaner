@@ -31,6 +31,8 @@ public refines class BessereMain {
 	
 	private JList list;
 	
+	public final String[] listEntries = { "Billiger Campingplatz", "Nicht so billiger Campingplatz", "teurer Campingplatz", "Super-Mega-Hammer-Ultra-Deluxe Campingplatz"};
+	
 	public void design() {
 		Super().design();
 		
@@ -70,16 +72,16 @@ public refines class BessereMain {
 
         list.setModel(new AbstractListModel() {
 
-        	String[] campingplaetze = { "Billiger Campingplatz", "Nicht so billiger Campingplatz", "teurer Campingplatz", "Super-Mega-Hammer-Ultra-Deluxe Campingplatz"};
+        	
 
             @Override
             public int getSize() {
-                return campingplaetze.length;
+                return listEntries.length;
             }
 
             @Override
             public Object getElementAt(int i) {
-                return campingplaetze[i];
+                return listEntries[i];
             }
         });
         

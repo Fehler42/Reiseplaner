@@ -17,48 +17,48 @@ import javax.swing.JTextField;
 import javax.swing.SwingConstants;
 
 /**
- * feature to book different bungalows
+ * feature to book different flight
  */
 public refines class BessereMain {
 	private static final long serialVersionUID = 1L;
 
-	public static final String PAGE_BUNGALOW = "Bungalow";
-	public JPanel bungalowPage;
+	public static final String PAGE_FLIGHT = "FLIGHT";
+	public JPanel flightPage;
 	
-	public final String[] listEntries= { "Billiger Bungalow", "Nicht so billiger Bungalow", "teurer Bungalow", "Super-Mega-Hammer-Ultra-Deluxe Bungalow"};
+	public final String[] listEntries = { "Billiger Flug", "Nicht so billiger Flug", "teurer Flug", "Super-Mega-Hammer-Ultra-Deluxe Flug"};
 	
 	private JList list;
 	
 	public void design() {
 		Super().design();
 		
-		JButton btnBookBungalow = new JButton("Bungalow buchen");
-		btnBookBungalow.setPreferredSize(new Dimension(200, 300));
+		JButton btnBookFlight = new JButton("Flug buchen");
+		btnBookFlight.setPreferredSize(new Dimension(200, 300));
 		
-		campingChoosePage.add(btnBookBungalow);
+		JPanel jurneyPanel = (JPanel) reise_buchenPage.getComponent(0);
+		
+		jurneyPanel.add(btnBookFlight);
 		
 		//Start new Panel page here
-		bungalowPage = new JPanel(new BorderLayout());
+		flightPage = new JPanel(new BorderLayout());
 		
-		listBungalows();
+		listFlight();
 		
-		masterPanel.add(bungalowPage, PAGE_BUNGALOW);
+		masterPanel.add(flightPage, PAGE_FLIGHT);
 		
 		//Button click switches Panel
-		btnBookBungalow.addActionListener(new ActionListener() {
+		btnBookFlight.addActionListener(new ActionListener() {
 		    public void actionPerformed (ActionEvent event) {
-		    	cardLayout.show(masterPanel, PAGE_BUNGALOW);
+		    	cardLayout.show(masterPanel, PAGE_FLIGHT);
 		    }
 		} );
 	}
 	
-	public void listBungalows() {
+	public void listFlight() {
 		
 		list = new JList();
 
         list.setModel(new AbstractListModel() {
-
-        	
 
             @Override
             public int getSize() {
@@ -72,14 +72,13 @@ public refines class BessereMain {
         });
         
     	list.addListSelectionListener(new ListSelectionListener() {
-            
     		@Override
             public void valueChanged(ListSelectionEvent evt) {
                 listValueChanged(evt);
             }
         });
         
-    	bungalowPage.add(list, BorderLayout.NORTH);
+    	flightPage.add(list, BorderLayout.NORTH);
 	}	
 	
     private void listValueChanged(javax.swing.event.ListSelectionEvent evt) {
@@ -97,6 +96,7 @@ public refines class BessereMain {
         }
         
         cardLayout.show(masterPanel, PAGE_PAY);
+        
     }
 
 	

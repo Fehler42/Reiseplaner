@@ -27,6 +27,9 @@ public refines class BessereMain {
 	
 	private JList list;
 	
+	public final String[] listEntries = { "Billiger Stelplatz", "Nicht so billiger Stelplatz", "teurer Stellplatz", "Super-Mega-Hammer-Ultra-Deluxe Stellplatz"};
+
+	
 	public void design() {
 		Super().design();
 		
@@ -56,16 +59,15 @@ public refines class BessereMain {
 
         list.setModel(new AbstractListModel() {
 
-        	String[] stellplatz = { "Billiger Stelplatz", "Nicht so billiger Stelplatz", "teurer Stellplatz", "Super-Mega-Hammer-Ultra-Deluxe Stellplatz"};
 
             @Override
             public int getSize() {
-                return stellplatz.length;
+                return listEntries.length;
             }
 
             @Override
             public Object getElementAt(int i) {
-                return stellplatz[i];
+                return listEntries[i];
             }
         });
         
@@ -82,11 +84,19 @@ public refines class BessereMain {
 	
     private void listValueChanged(javax.swing.event.ListSelectionEvent evt) {
         //set text on right here
-        String s = (String) list.getSelectedValue();
-        switch(s) {
-        default:
-        	break;
+        final String s = (String) list.getSelectedValue();
+        
+        if(s.equals(listEntries[0]))
+        	updateText("30 Euro");
+        else if(s.equals(listEntries[1]))
+        	updateText("50 Euro");
+        else if(s.equals(listEntries[2]))
+        	updateText("100 Euro");
+        else if(s.equals(listEntries[3])) {
+        	updateText("300 Euro");
         }
+        
+        cardLayout.show(masterPanel, PAGE_PAY);
     }
 
 	
