@@ -19,11 +19,16 @@ import javax.swing.SwingConstants;
 /**
  * feature to book different car
  */
-public refines class BessereMain {
+public refines
+
+class BessereMain {
 	private static final long serialVersionUID = 1L;
 
 	public static final String PAGE_CAR = "CAR";
+	public static final String PAGE_ROUTE = "ROUTE";
+	
 	public JPanel carPage;
+	public JPanel routePage;
 	
 	public final String[] listEntries = { "Billiges Auto", "Nicht so billiges Auto", "teures Auto", "Super-Mega-Hammer-Ultra-Deluxe Auto"};
 	
@@ -40,11 +45,12 @@ public refines class BessereMain {
 		jurneyPanel.add(btnBookCar);
 		
 		//Start new Panel page here
-		carPage = new JPanel(new BorderLayout());
+		carPage = new JPanel(new FlowLayout());
 		
 		listCar();
 		
 		masterPanel.add(carPage, PAGE_CAR);
+		masterPanel.add(routePage, PAGE_ROUTE);
 		
 		//Button click switches Panel
 		btnBookCar.addActionListener(new ActionListener() {
@@ -83,24 +89,25 @@ public refines class BessereMain {
 	
     protected void listValueChanged(javax.swing.event.ListSelectionEvent evt) {
     	
-    	System.out.println("2");
-    	
-        //set text on right here
-        final String s = (String) list.getSelectedValue();
+    	if(routeBool == false) {
+    		//set text on right here
+    		final String s = (String) list.getSelectedValue();
         
-        if(s.equals(listEntries[0]))
-        	updateText("30 Euro");
-        else if(s.equals(listEntries[1]))
-        	updateText("50 Euro");
-        else if(s.equals(listEntries[2]))
-        	updateText("100 Euro");
-        else if(s.equals(listEntries[3])) {
-        	updateText("300 Euro");
-        }
+    		if(s.equals(listEntries[0]))
+    			updateText("30 Euro");
+    		else if(s.equals(listEntries[1]))
+    			updateText("50 Euro");
+    		else if(s.equals(listEntries[2]))
+    			updateText("100 Euro");
+    		else if(s.equals(listEntries[3])) 
+    			updateText("300 Euro");
+    		
+    		cardLayout.show(masterPanel, PAGE_PAY);
+    	}
         
-        cardLayout.show(masterPanel, PAGE_PAY);
-        
-    }
-
-	
+        cardLayout.show(masterPanel, PAGE_Route);
+    }	
+    		  
 }
+
+

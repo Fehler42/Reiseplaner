@@ -1,11 +1,105 @@
+
+import java.awt.BorderLayout;
+import java.awt.Color;
+import java.awt.Dimension;
+import java.awt.event.*;
+import java.*;
+import javax.swing.event.ListSelectionEvent;
+import javax.swing.event.ListSelectionListener;
+
+import javax.swing.BorderFactory;
+import javax.swing.Box;
+import javax.swing.JButton;
+import javax.swing.JLabel;
+import javax.swing.border.Border;
+import javax.swing.JPanel;
+import javax.swing.JTextField;
+import javax.swing.SwingConstants;
+
 /**
- * TODO description
+ * feature to book different bungalows
  */
 public refines class BessereMain {
+	
+	
+	private static final long serialVersionUID = 1L;
 
-	protected void listValueChanged(javax.swing.event.ListSelectionEvent evt) {
-    	
-    	System.out.println("ok");
-    	Super().listValueChanged(evt);
+	public static final String PAGE_ROUTE2 = "Route2";
+	public JPanel route2Page;
+	
+	public final String[] listEntries= { "Schnellste Route", "Kürzeste Route", "Schönste Route", "Keine AUtobahn"};
+	
+	private JList list;
+	
+	public void design() {
+		Super().design();
+		routeBool = true;
+		JButton btnBookRoute2 = new JButton("Route auswählen");
+		btnBookRoute2.setPreferredSize(new Dimension(200, 300));
+		
+		routePage.add(btnBookRoute2);
+		
+		//Start new Panel page here
+		route2Page = new JPanel(new BorderLayout());
+		
+		listRoute2();
+		
+		masterPanel.add(route2Page, PAGE_ROUTE2);
+		
+		//Button click switches Panel
+		btnBookRoute2.addActionListener(new ActionListener() {
+		    public void actionPerformed (ActionEvent event) {
+		    	cardLayout.show(masterPanel, PAGE_ROUTE2);
+		    }
+		} );
 	}
+	
+	public void listRoute2() {
+		
+		list = new JList();
+
+        list.setModel(new AbstractListModel() {
+
+        	
+
+            @Override
+            public int getSize() {
+                return listEntries.length;
+            }
+
+            @Override
+            public Object getElementAt(int i) {
+                return listEntries[i];
+            }
+        });
+        
+    	list.addListSelectionListener(new ListSelectionListener() {
+            
+    		@Override
+            public void valueChanged(ListSelectionEvent evt) {
+                listValueChanged(evt);
+            }
+        });
+        
+    	route2Page.add(list, BorderLayout.NORTH);
+	}	
+	
+    protected void listValueChanged(javax.swing.event.ListSelectionEvent evt) {
+        //set text on right here
+        final String s = (String) list.getSelectedValue();
+        
+        if(s.equals(listEntries[0]))
+        	updateText("30 Euro");
+        else if(s.equals(listEntries[1]))
+        	updateText("50 Euro");
+        else if(s.equals(listEntries[2]))
+        	updateText("100 Euro");
+        else if(s.equals(listEntries[3])) {
+        	updateText("300 Euro");
+        }
+        
+        cardLayout.show(masterPanel, PAGE_PAY);
+    }
+
+	
 }

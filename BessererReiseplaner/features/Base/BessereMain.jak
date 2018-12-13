@@ -13,6 +13,7 @@ public class BessereMain extends JFrame {
 	public JPanel mainPage;
 	public JPanel payPage;
 	CardLayout cardLayout;
+	public boolean routeBool = false;
 	
 	//Test
 	public String priceToPay;
