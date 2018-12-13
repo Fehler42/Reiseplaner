@@ -13,7 +13,10 @@ public class BessereMain extends JFrame {
 	public JPanel mainPage;
 	public JPanel payPage;
 	CardLayout cardLayout;
-
+	
+	//Test
+	public String priceToPay;
+	
 	//CardLayout page names
 	public static final String PAGE_MAIN = "MAIN";
 	public static final String PAGE_PAY = "PAY";
@@ -42,6 +45,7 @@ public class BessereMain extends JFrame {
 		mainPage.setLayout(new BorderLayout());
 		
 		payPage = new JPanel(new BorderLayout());
+		paypageDesign();
 		
 		//Upperwindow contains SuchLeiste
 		JPanel upperWindow = new JPanel();
@@ -56,9 +60,31 @@ public class BessereMain extends JFrame {
 		masterPanel.add(payPage, PAGE_PAY);
 		
 		cardLayout.show(masterPanel, PAGE_MAIN);
-		//TODO: When all is done, show main page
+		
+	}
+	
+	public void paypageDesign() {
+		JPanel upperPage = new JPanel(new BorderLayout());
+		JPanel lowerPage = new JPanel(new BorderLayout());
+		payPage.add(upperPage, BorderLayout.NORTH);
+		payPage.add(lowerPage, BorderLayout.SOUTH);
+		JLabel description = new JLabel("Das kostet ");
+		description.setAlignmentX(CENTER_ALIGNMENT);
+		description.setAlignmentY(CENTER_ALIGNMENT);
+		upperPage.add(description, BorderLayout.SOUTH);
 	}
 
+	public void updateText(String newText) {
+		priceToPay = newText;
+		updatePrice();
+	}
+	
+	public void updatePrice() {
+		JPanel upperArea = (JPanel) payPage.getComponent(0);
+		JLabel text = (JLabel) upperArea.getComponent(0);
+		text.setText("Das kostet " + priceToPay);	
+	}
+	
 	public static void main(String[] args) {
 
 		javax.swing.SwingUtilities.invokeLater(new Runnable() {

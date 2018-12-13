@@ -25,7 +25,7 @@ public refines class BessereMain {
 		Super().design();
 		
 		JButton btnGiroPay = new JButton("Bezahlen mit Giropay");
-		
+		updatePrice();
 		//Button click switches Panel
 		btnGiroPay.addActionListener(new ActionListener() {
 		    public void actionPerformed (ActionEvent event) {
@@ -33,6 +33,13 @@ public refines class BessereMain {
 		    }
 		} );
 		
-		payPage.add(btnGiroPay, BorderLayout.CENTER);
+		JPanel lowerArea = (JPanel) payPage.getComponent(1);
+		lowerArea.add(btnGiroPay, BorderLayout.NORTH);
+	}
+	
+	public void updatePrice() {
+		JPanel upperArea = (JPanel) payPage.getComponent(0);
+		JLabel text = (JLabel) upperArea.getComponent(0);
+		text.setText(text.getText() + priceToPay);
 	}
 }

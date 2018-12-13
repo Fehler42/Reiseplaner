@@ -16,7 +16,7 @@ import javax.swing.SwingConstants;
 import java.awt.event.*;
 
 /**
- * Sets the base for all the following book options
+ * enables paypal
  */
 public refines class BessereMain {
 	private static final long serialVersionUID = 1L;
@@ -24,15 +24,16 @@ public refines class BessereMain {
 	public void design() {
 		Super().design();
 		
-		JButton btnPayPaypal = new JButton("Bezahlen mit Paypal");
+		JButton btnKreditkarte = new JButton("Bezahlen mit Paypal");
 		
 		//Button click switches Panel
-		btnPayPaypal.addActionListener(new ActionListener() {
+		btnKreditkarte.addActionListener(new ActionListener() {
 		    public void actionPerformed (ActionEvent event) {
 		    	cardLayout.show(masterPanel, PAGE_MAIN);
 		    }
 		} );
 		
-		payPage.add(btnPayPaypal, BorderLayout.CENTER);
+		JPanel lowerArea = (JPanel) payPage.getComponent(1);
+		lowerArea.add(btnKreditkarte, BorderLayout.NORTH);
 	}
 }

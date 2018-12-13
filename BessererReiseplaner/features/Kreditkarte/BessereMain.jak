@@ -24,15 +24,21 @@ public refines class BessereMain {
 	public void design() {
 		Super().design();
 		
-		JButton btnPayPaypal = new JButton("Bezahlen mit Kreditkarte");
-		
+		JButton btnKreditkarte = new JButton("Bezahlen mit Kreditkarte");
+		updatePrice();
 		//Button click switches Panel
-		btnPayPaypal.addActionListener(new ActionListener() {
+		btnKreditkarte.addActionListener(new ActionListener() {
 		    public void actionPerformed (ActionEvent event) {
 		    	cardLayout.show(masterPanel, PAGE_MAIN);
 		    }
 		} );
 		
-		payPage.add(btnPayPaypal, BorderLayout.CENTER);
+		JPanel lowerArea = (JPanel) payPage.getComponent(1);
+		lowerArea.add(btnKreditkarte, BorderLayout.NORTH);
+	}
+	public void updatePrice() {
+		JPanel upperArea = (JPanel) payPage.getComponent(0);
+		JLabel text = (JLabel) upperArea.getComponent(0);
+		text.setText(text.getText() + priceToPay);
 	}
 }
