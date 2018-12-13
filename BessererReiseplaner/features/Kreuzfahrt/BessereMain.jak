@@ -17,44 +17,44 @@ import javax.swing.JTextField;
 import javax.swing.SwingConstants;
 
 /**
- * feature to book different car
+ * feature to book different cruise
  */
 public refines class BessereMain {
-	private static final long serialVersionUID = 1L;
+/*	private static final long serialVersionUID = 1L;
 
-	public static final String PAGE_CAR = "CAR";
-	public JPanel carPage;
+	public static final String PAGE_SHIP = "SHIP";
+	public JPanel shipPage;
 	
-	public final String[] listEntries = { "Billiges Auto", "Nicht so billiges Auto", "teures Auto", "Super-Mega-Hammer-Ultra-Deluxe Auto"};
+	public final String[] listEntries = { "Billige Kreuzfahrt", "Nicht so billige Kreuzfahrt", "teure Kreuzfahrt", "Super-Mega-Hammer-Ultra-Deluxe Kreufahrt"};
 	
 	private JList list;
 	
 	public void design() {
 		Super().design();
 		
-		JButton btnBookCar = new JButton("Auto mieten");
-		btnBookCar.setPreferredSize(new Dimension(200, 300));
+		JButton btnBookShip = new JButton("Kreuzfahrt buchen");
+		btnBookBus.setPreferredSize(new Dimension(200, 300));
 		
 		JPanel jurneyPanel = (JPanel) reise_buchenPage.getComponent(0);
 		
-		jurneyPanel.add(btnBookCar);
+		jurneyPanel.add(btnBookBus);
 		
 		//Start new Panel page here
-		carPage = new JPanel(new BorderLayout());
+		busPage = new JPanel(new BorderLayout());
 		
-		listCar();
+		listBus();
 		
-		masterPanel.add(carPage, PAGE_CAR);
+		masterPanel.add(busPage, PAGE_BUS);
 		
 		//Button click switches Panel
-		btnBookCar.addActionListener(new ActionListener() {
+		btnBookBus.addActionListener(new ActionListener() {
 		    public void actionPerformed (ActionEvent event) {
-		    	cardLayout.show(masterPanel, PAGE_CAR);
+		    	cardLayout.show(masterPanel, PAGE_BUS);
 		    }
 		} );
 	}
 	
-	public void listCar() {
+	public void listBus() {
 		
 		list = new JList();
 
@@ -78,13 +78,10 @@ public refines class BessereMain {
             }
         });
         
-    	carPage.add(list, BorderLayout.NORTH);
+    	busPage.add(list, BorderLayout.NORTH);
 	}	
 	
-    protected void listValueChanged(javax.swing.event.ListSelectionEvent evt) {
-    	
-    	System.out.println("2");
-    	
+    private void listValueChanged(javax.swing.event.ListSelectionEvent evt) {
         //set text on right here
         final String s = (String) list.getSelectedValue();
         
@@ -102,5 +99,5 @@ public refines class BessereMain {
         
     }
 
-	
+	*/
 }
