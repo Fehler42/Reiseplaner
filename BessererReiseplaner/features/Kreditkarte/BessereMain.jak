@@ -36,9 +36,4 @@ public refines class BessereMain {
 		JPanel lowerArea = (JPanel) payPage.getComponent(1);
 		lowerArea.add(btnKreditkarte, BorderLayout.NORTH);
 	}
-	public void updatePrice() {
-		JPanel upperArea = (JPanel) payPage.getComponent(0);
-		JLabel text = (JLabel) upperArea.getComponent(0);
-		text.setText(text.getText() + priceToPay);
-	}
 }

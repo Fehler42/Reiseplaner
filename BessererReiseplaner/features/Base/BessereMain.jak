@@ -44,7 +44,6 @@ public class BessereMain extends JFrame {
 		mainPage = new JPanel();
 		mainPage.setLayout(new BorderLayout());
 		
-		payPage = new JPanel(new BorderLayout());
 		paypageDesign();
 		
 		//Upperwindow contains SuchLeiste
@@ -64,14 +63,20 @@ public class BessereMain extends JFrame {
 	}
 	
 	public void paypageDesign() {
+		payPage = new JPanel();
+		payPage.setLayout(new BoxLayout(payPage, BoxLayout.Y_AXIS));
+		
 		JPanel upperPage = new JPanel(new BorderLayout());
 		JPanel lowerPage = new JPanel(new BorderLayout());
-		payPage.add(upperPage, BorderLayout.NORTH);
-		payPage.add(lowerPage, BorderLayout.SOUTH);
+		payPage.add(upperPage);
+		payPage.add(lowerPage);
+		
 		JLabel description = new JLabel("Das kostet ");
+		
 		description.setAlignmentX(CENTER_ALIGNMENT);
 		description.setAlignmentY(CENTER_ALIGNMENT);
 		upperPage.add(description, BorderLayout.SOUTH);
+		
 	}
 
 	public void updateText(String newText) {
@@ -83,6 +88,8 @@ public class BessereMain extends JFrame {
 		JPanel upperArea = (JPanel) payPage.getComponent(0);
 		JLabel text = (JLabel) upperArea.getComponent(0);
 		text.setText("Das kostet " + priceToPay);	
+		text.setHorizontalTextPosition(JLabel.CENTER);
+		
 	}
 	
 	public static void main(String[] args) {
