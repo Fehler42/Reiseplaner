@@ -27,6 +27,8 @@ public refines class BessereMain {
 	
 	private JList list;
 	
+	public final String[] listEntries = { "Billiges Ferienhaus", "Nicht so billiges Ferienhaus", "teures Ferienhaus", "Super-Mega-Hammer-Ultra-Deluxe Ferienhaus"};
+	
 	public void design() {
 		Super().design();
 		
@@ -58,16 +60,16 @@ public refines class BessereMain {
 
         list.setModel(new AbstractListModel() {
 
-        	String[] ferienhaeuser = { "Billiges Ferienhaus", "Nicht so billiges Ferienhaus", "teures Ferienhaus", "Super-Mega-Hammer-Ultra-Deluxe Ferienhaus"};
+        	
 
             @Override
             public int getSize() {
-                return ferienhaeuser.length;
+                return listEntries.length;
             }
 
             @Override
             public Object getElementAt(int i) {
-                return ferienhaeuser[i];
+                return listEntries[i];
             }
         });
         
@@ -83,12 +85,20 @@ public refines class BessereMain {
 	}	
 	
     private void listValueChanged(javax.swing.event.ListSelectionEvent evt) {
-        //set text on right here
-        String s = (String) list.getSelectedValue();
-        switch(s) {
-        default:
-        	break;
+    	 //set text on right here
+        final String s = (String) list.getSelectedValue();
+        
+        if(s.equals(listEntries[0]))
+        	updateText("30 Euro");
+        else if(s.equals(listEntries[1]))
+        	updateText("50 Euro");
+        else if(s.equals(listEntries[2]))
+        	updateText("100 Euro");
+        else if(s.equals(listEntries[3])) {
+        	updateText("300 Euro");
         }
+        
+        cardLayout.show(masterPanel, PAGE_PAY);
     }
 
 	

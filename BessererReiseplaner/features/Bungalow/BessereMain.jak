@@ -25,6 +25,8 @@ public refines class BessereMain {
 	public static final String PAGE_BUNGALOW = "Bungalow";
 	public JPanel bungalowPage;
 	
+	public final String[] listEntries= { "Billiger Bungalow", "Nicht so billiger Bungalow", "teurer Bungalow", "Super-Mega-Hammer-Ultra-Deluxe Bungalow"};
+	
 	private JList list;
 	
 	public void design() {
@@ -56,16 +58,16 @@ public refines class BessereMain {
 
         list.setModel(new AbstractListModel() {
 
-        	String[] bungalows = { "Billiger Bungalow", "Nicht so billiger Bungalow", "teurer Bungalow", "Super-Mega-Hammer-Ultra-Deluxe Bungalow"};
+        	
 
             @Override
             public int getSize() {
-                return bungalows.length;
+                return listEntries.length;
             }
 
             @Override
             public Object getElementAt(int i) {
-                return bungalows[i];
+                return listEntries[i];
             }
         });
         
@@ -82,11 +84,19 @@ public refines class BessereMain {
 	
     private void listValueChanged(javax.swing.event.ListSelectionEvent evt) {
         //set text on right here
-        String s = (String) list.getSelectedValue();
-        switch(s) {
-        default:
-        	break;
+        final String s = (String) list.getSelectedValue();
+        
+        if(s.equals(listEntries[0]))
+        	updateText("30 Euro");
+        else if(s.equals(listEntries[1]))
+        	updateText("50 Euro");
+        else if(s.equals(listEntries[2]))
+        	updateText("100 Euro");
+        else if(s.equals(listEntries[3])) {
+        	updateText("300 Euro");
         }
+        
+        cardLayout.show(masterPanel, PAGE_PAY);
     }
 
 	
