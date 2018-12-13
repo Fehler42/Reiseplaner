@@ -1,0 +1,103 @@
+
+import java.awt.BorderLayout;
+import java.awt.Color;
+import java.awt.Dimension;
+import java.awt.event.*;
+import java.*;
+import javax.swing.event.ListSelectionEvent;
+import javax.swing.event.ListSelectionListener;
+
+import javax.swing.BorderFactory;
+import javax.swing.Box;
+import javax.swing.JButton;
+import javax.swing.JLabel;
+import javax.swing.border.Border;
+import javax.swing.JPanel;
+import javax.swing.JTextField;
+import javax.swing.SwingConstants;
+
+/**
+ * feature to book different flight
+ */
+public refines class BessereMain {
+	private static final long serialVersionUID = 1L;
+
+	public static final String PAGE_FLIGHT = "FLIGHT";
+	public JPanel flightPage;
+	
+	public final String[] listEntries = { "Billiger Flug", "Nicht so billiger Flug", "teurer Flug", "Super-Mega-Hammer-Ultra-Deluxe Flug"};
+	
+	private JList list;
+	
+	public void design() {
+		Super().design();
+		
+		JButton btnBookFlight = new JButton("Flug buchen");
+		btnBookFlight.setPreferredSize(new Dimension(200, 300));
+		
+		JPanel jurneyPanel = (JPanel) reise_buchenPage.getComponent(0);
+		
+		jurneyPanel.add(btnBookFlight);
+		
+		//Start new Panel page here
+		flightPage = new JPanel(new BorderLayout());
+		
+		listFlight();
+		
+		masterPanel.add(flightPage, PAGE_FLIGHT);
+		
+		//Button click switches Panel
+		btnBookFlight.addActionListener(new ActionListener() {
+		    public void actionPerformed (ActionEvent event) {
+		    	cardLayout.show(masterPanel, PAGE_FLIGHT);
+		    }
+		} );
+	}
+	
+	public void listFlight() {
+		
+		list = new JList();
+
+        list.setModel(new AbstractListModel() {
+
+            @Override
+            public int getSize() {
+                return listEntries.length;
+            }
+
+            @Override
+            public Object getElementAt(int i) {
+                return listEntries[i];
+            }
+        });
+        
+    	list.addListSelectionListener(new ListSelectionListener() {
+    		@Override
+            public void valueChanged(ListSelectionEvent evt) {
+                listValueChanged(evt);
+            }
+        });
+        
+    	flightPage.add(list, BorderLayout.NORTH);
+	}	
+	
+    private void listValueChanged(javax.swing.event.ListSelectionEvent evt) {
+        //set text on right here
+        final String s = (String) list.getSelectedValue();
+        
+        if(s.equals(listEntries[0]))
+        	updateText("30 Euro");
+        else if(s.equals(listEntries[1]))
+        	updateText("50 Euro");
+        else if(s.equals(listEntries[2]))
+        	updateText("100 Euro");
+        else if(s.equals(listEntries[3])) {
+        	updateText("300 Euro");
+        }
+        
+        cardLayout.show(masterPanel, PAGE_PAY);
+        
+    }
+
+	
+}

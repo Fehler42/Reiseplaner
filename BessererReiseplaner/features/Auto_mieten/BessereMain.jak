@@ -1,0 +1,103 @@
+
+import java.awt.BorderLayout;
+import java.awt.Color;
+import java.awt.Dimension;
+import java.awt.event.*;
+import java.*;
+import javax.swing.event.ListSelectionEvent;
+import javax.swing.event.ListSelectionListener;
+
+import javax.swing.BorderFactory;
+import javax.swing.Box;
+import javax.swing.JButton;
+import javax.swing.JLabel;
+import javax.swing.border.Border;
+import javax.swing.JPanel;
+import javax.swing.JTextField;
+import javax.swing.SwingConstants;
+
+/**
+ * feature to book different car
+ */
+public refines class BessereMain {
+	private static final long serialVersionUID = 1L;
+
+	public static final String PAGE_CAR = "CAR";
+	public JPanel carPage;
+	
+	public final String[] listEntries = { "Billiges Auto", "Nicht so billiges Auto", "teures Auto", "Super-Mega-Hammer-Ultra-Deluxe Auto"};
+	
+	private JList list;
+	
+	public void design() {
+		Super().design();
+		
+		JButton btnBookCar = new JButton("Auto mieten");
+		btnBookCar.setPreferredSize(new Dimension(200, 300));
+		
+		JPanel jurneyPanel = (JPanel) reise_buchenPage.getComponent(0);
+		
+		jurneyPanel.add(btnBookCar);
+		
+		//Start new Panel page here
+		carPage = new JPanel(new BorderLayout());
+		
+		listCar();
+		
+		masterPanel.add(carPage, PAGE_CAR);
+		
+		//Button click switches Panel
+		btnBookCar.addActionListener(new ActionListener() {
+		    public void actionPerformed (ActionEvent event) {
+		    	cardLayout.show(masterPanel, PAGE_CAR);
+		    }
+		} );
+	}
+	
+	public void listCar() {
+		
+		list = new JList();
+
+        list.setModel(new AbstractListModel() {
+
+            @Override
+            public int getSize() {
+                return listEntries.length;
+            }
+
+            @Override
+            public Object getElementAt(int i) {
+                return listEntries[i];
+            }
+        });
+        
+    	list.addListSelectionListener(new ListSelectionListener() {
+    		@Override
+            public void valueChanged(ListSelectionEvent evt) {
+                listValueChanged(evt);
+            }
+        });
+        
+    	carPage.add(list, BorderLayout.NORTH);
+	}	
+	
+    private void listValueChanged(javax.swing.event.ListSelectionEvent evt) {
+        //set text on right here
+        final String s = (String) list.getSelectedValue();
+        
+        if(s.equals(listEntries[0]))
+        	updateText("30 Euro");
+        else if(s.equals(listEntries[1]))
+        	updateText("50 Euro");
+        else if(s.equals(listEntries[2]))
+        	updateText("100 Euro");
+        else if(s.equals(listEntries[3])) {
+        	updateText("300 Euro");
+        }
+        
+        cardLayout.show(masterPanel, PAGE_PAY);
+        
+    }
+
+	
+}
