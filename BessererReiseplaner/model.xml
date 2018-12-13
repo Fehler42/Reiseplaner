@@ -5,7 +5,6 @@
         <and abstract="true" mandatory="true" name="BessererReiseplaner">
             <and mandatory="true" name="Base">
                 <feature mandatory="true" name="Suchleiste"/>
-                <feature name="Kniggetipps"/>
                 <or abstract="true" mandatory="true" name="Buchen">
                     <or name="Unterkunft_buchen_base">
                         <feature name="Hotel"/>
@@ -51,7 +50,6 @@
         <feature name="Busreise"/>
         <feature name="Stellplatz"/>
         <feature name="Ferienhaus"/>
-        <feature name="Kniggetipps"/>
         <feature name="Aktivitaet_buchen"/>
         <feature name="Flug"/>
         <feature name="Hotel"/>

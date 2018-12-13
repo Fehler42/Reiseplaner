@@ -24,16 +24,16 @@ public refines class BessereMain {
 	public void design() {
 		Super().design();
 		
-		JButton btnKreditkarte = new JButton("Bezahlen mit Paypal");
+		JButton btnPayPal = new JButton("Bezahlen mit Paypal");
 		
 		//Button click switches Panel
-		btnKreditkarte.addActionListener(new ActionListener() {
+		btnPayPal.addActionListener(new ActionListener() {
 		    public void actionPerformed (ActionEvent event) {
 		    	cardLayout.show(masterPanel, PAGE_MAIN);
 		    }
 		} );
 		
 		JPanel lowerArea = (JPanel) payPage.getComponent(1);
-		lowerArea.add(btnKreditkarte, BorderLayout.NORTH);
+		lowerArea.add(btnPayPal, BorderLayout.NORTH);
 	}
 }
