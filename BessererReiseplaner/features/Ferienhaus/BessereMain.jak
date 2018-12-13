@@ -84,7 +84,7 @@ public refines class BessereMain {
     	ferienPage.add(list, BorderLayout.NORTH);
 	}	
 	
-    private void listValueChanged(javax.swing.event.ListSelectionEvent evt) {
+    protected void listValueChanged(javax.swing.event.ListSelectionEvent evt) {
     	 //set text on right here
         final String s = (String) list.getSelectedValue();
         
