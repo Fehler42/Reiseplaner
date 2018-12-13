@@ -20,7 +20,7 @@ import java.awt.event.*;
 public refines class BessereMain {
 	private static final long serialVersionUID = 1L;
 	public static final String PAGE_REISE = "REISE";
-	public JPanel reise_buchen;
+	public JPanel reise_buchenPage;
 	
 	public void design() {
 		Super().design();
@@ -33,8 +33,11 @@ public refines class BessereMain {
 		center.add(btnBookResort);
 		
 		//Start new Panel page here
-		reise_buchen = new JPanel(new BorderLayout());
-		masterPanel.add(reise_buchen, PAGE_REISE);
+		reise_buchenPage = new JPanel(new BorderLayout());
+		JPanel travel = new JPanel(new FlowLayout());
+		reise_buchenPage.add(travel, BorderLayout.CENTER);
+		
+		masterPanel.add(reise_buchenPage, PAGE_REISE);
 		
 		//Button click switches Panel
 		btnBookResort.addActionListener(new ActionListener() { 
