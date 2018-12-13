@@ -11,75 +11,61 @@ import javax.swing.BorderFactory;
 import javax.swing.Box;
 import javax.swing.JButton;
 import javax.swing.JLabel;
-import javax.swing.JList;
 import javax.swing.border.Border;
 import javax.swing.JPanel;
 import javax.swing.JTextField;
 import javax.swing.SwingConstants;
 
 /**
- * feature to book different campingplaetze
+ * feature to book different bungalows
  */
 public refines class BessereMain {
 	private static final long serialVersionUID = 1L;
 
-	public static final String PAGE_CAMPING = "Camping";
-	public static final String PAGE_CHOOSE = "Auswahl";
-	
-	public JPanel campingPage;
-	public JPanel campingChoosePage;
+	public static final String PAGE_BUNGALOW = "Bungalow";
+	public JPanel bungalowPage;
 	
 	private JList list;
 	
 	public void design() {
 		Super().design();
 		
-		JButton btnBookCamping = new JButton("Campingplatz buchen");
-		btnBookCamping.setPreferredSize(new Dimension(200, 300));
+		JButton btnBookBungalow = new JButton("Bungalow buchen");
+		btnBookBungalow.setPreferredSize(new Dimension(200, 300));
 		
-		JPanel resortPanel = (JPanel) unterkunftPage.getComponent(0);
-		
-		resortPanel.add(btnBookCamping);
+		campingChoosePage.add(btnBookBungalow);
 		
 		//Start new Panel page here
-		campingPage = new JPanel(new BorderLayout());
+		bungalowPage = new JPanel(new BorderLayout());
 		
-		//page for choosing after clicking on a camping place
-		campingChoosePage = new JPanel(new FlowLayout());
+		listBungalows();
 		
-		
-		listCampingplaetze();
-		
-		masterPanel.add(campingPage, PAGE_CAMPING);
-		masterPanel.add(campingChoosePage, PAGE_CHOOSE);
+		masterPanel.add(bungalowPage, PAGE_BUNGALOW);
 		
 		//Button click switches Panel
-		btnBookCamping.addActionListener(new ActionListener() {
+		btnBookBungalow.addActionListener(new ActionListener() {
 		    public void actionPerformed (ActionEvent event) {
-		    	cardLayout.show(masterPanel, PAGE_CAMPING);
+		    	cardLayout.show(masterPanel, PAGE_BUNGALOW);
 		    }
 		} );
-		
-		
-		
 	}
 	
-	public void listCampingplaetze() {
+	public void listBungalows() {
 		
 		list = new JList();
 
         list.setModel(new AbstractListModel() {
 
-        	String[] campingplaetze = { "Billiger Campingplatz", "Nicht so billiger Campingplatz", "teurer Campingplatz", "Super-Mega-Hammer-Ultra-Deluxe Campingplatz"};
+        	String[] bungalows = { "Billiger Bungalow", "Nicht so billiger Bungalow", "teurer Bungalow", "Super-Mega-Hammer-Ultra-Deluxe Bungalow"};
 
             @Override
             public int getSize() {
-                return campingplaetze.length;
+                return bungalows.length;
             }
 
             @Override
             public Object getElementAt(int i) {
-                return campingplaetze[i];
+                return bungalows[i];
             }
         });
         
@@ -90,17 +76,15 @@ public refines class BessereMain {
                 listValueChanged(evt);
             }
         });
-    	
-    	
-    	campingPage.add(list, BorderLayout.NORTH);
-    	
+        
+    	bungalowPage.add(list, BorderLayout.NORTH);
 	}	
 	
     private void listValueChanged(javax.swing.event.ListSelectionEvent evt) {
         //set text on right here
         String s = (String) list.getSelectedValue();
         switch(s) {
-        default: cardLayout.show(masterPanel, PAGE_CHOOSE);
+        default:
         	break;
         }
     }
