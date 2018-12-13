@@ -37,9 +37,11 @@ public refines class BessereMain {
 		setTrue();
 		
 		JButton btnBookRoute2 = new JButton("Route auswählen");
+		JButton btnBookNoRoute = new JButton("Keine Route auswählen");
 		btnBookRoute2.setPreferredSize(new Dimension(200, 300));
 		
 		routePage.add(btnBookRoute2);
+		routePage.add(btnBookNoRoute);
 		
 		//Start new Panel page here
 		route2Page = new JPanel(new BorderLayout());
@@ -54,6 +56,11 @@ public refines class BessereMain {
 		    	cardLayout.show(masterPanel, PAGE_ROUTE2);
 		    }
 		} );
+		btnBookNoRoute.addActionListener(new ActionListener() {
+			public void actionPerformed (ActionEvent event) {
+				cardLayout.show(masterPanel, PAGE_PAY);
+			}
+		});
 	}
 	
 	public void listRoute2() {
