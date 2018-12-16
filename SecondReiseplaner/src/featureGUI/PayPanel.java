@@ -10,6 +10,7 @@ import javax.swing.JPanel;
 import payments.GiroPay;
 import payments.Kreditkarte;
 import payments.PayPal;
+import start.Main;
 
 public class PayPanel extends JPanel {
 
@@ -35,18 +36,15 @@ public class PayPanel extends JPanel {
 		
 		upperPage.add(description, BorderLayout.SOUTH);
 		
-		//TODO: XML for PayPal feature
-		if(true) {
+		if(Main.features.get(13).toString().equals("1")) {
 			lowerPage.add(new PayPal(win));
 		}
 		
-		//TODO: XML GiroPay
-		else if(true) {
+		else if(Main.features.get(14).toString().equals("1")) {
 			lowerPage.add(new GiroPay(win));
 		}
 		
-		//TODO: XML Kreditkarte
-		else if(true) {
+		else if(Main.features.get(12).toString().equals("1")) {
 			lowerPage.add(new Kreditkarte(win));
 		}
 	
@@ -55,7 +53,7 @@ public class PayPanel extends JPanel {
 		 */
 
 		// TODO: create Waehrungsrechner here
-		if (true) {
+		if (Main.features.get(15).toString().equals("1")) {
 			JPanel waehrungsrechner = new JPanel();
 			waehrungsrechner.setLayout(new BoxLayout(waehrungsrechner, BoxLayout.Y_AXIS));
 

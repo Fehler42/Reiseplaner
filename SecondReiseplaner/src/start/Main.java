@@ -1,4 +1,5 @@
 package start;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -9,7 +10,7 @@ public class Main {
 
 	public static ReisePlaner window;
 	public static List<String> features;
-	
+
 	public static void main(String[] args) {
 		javax.swing.SwingUtilities.invokeLater(new Runnable() {
 			@Override
@@ -17,7 +18,6 @@ public class Main {
 				window = new ReisePlaner();
 				features = new ArrayList<String>();
 				CheckList.fillList();
-				
 			}
 		});
 	}
