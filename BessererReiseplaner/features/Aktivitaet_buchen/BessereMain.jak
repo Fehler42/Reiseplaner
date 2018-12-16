@@ -23,6 +23,11 @@ public refines class BessereMain {
 	public static final String PAGE_AKTIVITAET = "AKTIVITAET";
 	public JPanel aktivitaet_buchen;
 	
+	private JList list;
+	
+	public final String[] listEntries = { "Billige Aktivitaet", "Nicht so billige Aktivitaet", "teure Aktivitaet", "Jochen-Schweizer Aktivitaet"};
+
+	
 	public void design() {
 		Super().design();
 		
@@ -32,9 +37,12 @@ public refines class BessereMain {
 		btnBookResort.setPreferredSize(new Dimension(200, 300));
 		
 		center.add(btnBookResort);
-		
+
 		//Start new Panel page here
 		aktivitaet_buchen = new JPanel(new BorderLayout());
+		
+		listAktivitaeten();
+		
 		masterPanel.add(aktivitaet_buchen, PAGE_AKTIVITAET);
 		
 		//Button click switches Panel
@@ -44,4 +52,52 @@ public refines class BessereMain {
 		  } 
 		} );
 	}
+public void listAktivitaeten() {
+		
+		list = new JList();
+
+        list.setModel(new AbstractListModel() {
+
+        	
+
+            @Override
+            public int getSize() {
+                return listEntries.length;
+            }
+
+            @Override
+            public Object getElementAt(int i) {
+                return listEntries[i];
+            }
+        });
+        
+    	list.addListSelectionListener(new ListSelectionListener() {
+            
+    		@Override
+            public void valueChanged(ListSelectionEvent evt) {
+                listValueChanged(evt);
+            }
+        });
+        
+    	aktivitaet_buchen.add(list, BorderLayout.NORTH);
+	}	
+	
+    private void listValueChanged(javax.swing.event.ListSelectionEvent evt) {
+    	 //set text on right here
+        final String s = (String) list.getSelectedValue();
+        
+        if(s.equals(listEntries[0]))
+        	updateText("30 Euro");
+        else if(s.equals(listEntries[1]))
+        	updateText("50 Euro");
+        else if(s.equals(listEntries[2]))
+        	updateText("100 Euro");
+        else if(s.equals(listEntries[3])) {
+        	updateText("300 Euro");
+        }
+        
+        cardLayout.show(masterPanel, PAGE_PAY);
+    }
+
+	
 }
