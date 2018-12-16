@@ -10,6 +10,7 @@ import javax.swing.JPanel;
 import payments.GiroPay;
 import payments.Kreditkarte;
 import payments.PayPal;
+import payments.Waehrungsrechner;
 import start.Main;
 
 public class PayPanel extends JPanel {
@@ -51,11 +52,8 @@ public class PayPanel extends JPanel {
 		 * IF XML DEFINES THIS AS FEATURE
 		 */
 
-		// TODO: create Waehrungsrechner here
 		if (Main.features.get(15).toString().equals("1")) {
-			JPanel waehrungsrechner = new JPanel();
-			waehrungsrechner.setLayout(new BoxLayout(waehrungsrechner, BoxLayout.Y_AXIS));
-
+			JPanel waehrungsrechner = new Waehrungsrechner();
 			this.add(waehrungsrechner);
 		}
 	}

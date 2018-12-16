@@ -22,23 +22,25 @@ public class XMLParser {
 		try {
 			documentBuilder = documentBuilderFactory.newDocumentBuilder();
 			Document document = documentBuilder.parse(file);
-			fillList(Main.features, document, "Unterkunft_buchen");
-			fillList(features, document, "Hotel");
-			fillList(features, document, "Ferienhaus");
-			fillList(features, document, "Campingplatz");
-			fillList(features, document, "Bungalow");
-			fillList(features, document, "Stellplatz");
-			fillList(features, document, "Reise_buchen");
-			fillList(features, document, "Busreise");
-			fillList(features, document, "Auto_mieten");
-			fillList(features, document, "Route_planen");
-			fillList(features, document, "Flug");
-			fillList(features, document, "Kreuzfahrt");
-			fillList(features, document, "Kreditkarte");
-			fillList(features, document, "PayPal");
-			fillList(features, document, "GiroPay");
-			fillList(features, document, "Waehrungsrechner");
 
+			fillList(Main.features, document,"Unterkunft_buchen");
+			fillList(features, document,"Hotel");
+			fillList(features, document,"Ferienhaus");
+			fillList(features, document,"Campingplatz");
+			fillList(features, document,"Bungalow");
+			fillList(features, document,"Stellplatz");
+			fillList(features, document,"Reise_buchen");
+			fillList(features, document,"Busreise");
+			fillList(features, document,"Auto_mieten");
+			fillList(features, document,"Route_planen");
+			fillList(features, document,"Flug");
+			fillList(features, document,"Kreuzfahrt");
+			fillList(features, document,"Kreditkarte");
+			fillList(features, document,"PayPal");
+			fillList(features, document,"GiroPay");
+			fillList(features, document,"Waehrungsrechner");
+			fillList(features, document, "Aktivitaet");
+		
 		} catch (ParserConfigurationException e) {
 			e.printStackTrace();
 		} catch (SAXException e) {
