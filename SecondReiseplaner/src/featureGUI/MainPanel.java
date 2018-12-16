@@ -10,6 +10,7 @@ import javax.swing.BoxLayout;
 import javax.swing.JButton;
 import javax.swing.JPanel;
 
+import reise.ReisePanel;
 import start.Main;
 import unterkunft.UnterkunftPanel;
 
@@ -42,6 +43,21 @@ public class MainPanel extends JPanel {
 			btnBookResort.addActionListener(new ActionListener() {
 				public void actionPerformed(ActionEvent event) {
 					window.changeWindow(UnterkunftPanel.PAGE_UNTERKUNFT);
+				}
+			});
+		}
+		if (Main.features.get(6).toString().equals("1")) {
+			JButton btnBookTravel = new JButton("Eine Reise buchen");
+			btnBookTravel.setPreferredSize(new Dimension(200, 300));
+
+			centerPanel.add(btnBookTravel);
+			this.add(centerPanel, BorderLayout.CENTER);
+			window.addPanel(new ReisePanel(window), ReisePanel.PAGE_REISE);
+
+			// Button click switches Panel
+			btnBookTravel.addActionListener(new ActionListener() {
+				public void actionPerformed(ActionEvent event) {
+					window.changeWindow(ReisePanel.PAGE_REISE);
 				}
 			});
 		}
