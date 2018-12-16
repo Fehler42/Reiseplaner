@@ -10,6 +10,7 @@ import javax.swing.BoxLayout;
 import javax.swing.JButton;
 import javax.swing.JPanel;
 
+import aktivitaet.Aktivitaetspanel;
 import start.Main;
 import unterkunft.UnterkunftPanel;
 
@@ -22,7 +23,6 @@ public class MainPanel extends JPanel {
 		window = win;
 		this.setLayout(new BorderLayout());
 
-		// TODO: Suchleiste schreiben
 		JPanel suchleiste = new Suchleiste();
 		this.add(suchleiste, BorderLayout.NORTH);
 
@@ -41,6 +41,28 @@ public class MainPanel extends JPanel {
 			btnBookResort.addActionListener(new ActionListener() {
 			    public void actionPerformed (ActionEvent event) {
 			    	window.changeWindow(UnterkunftPanel.PAGE_UNTERKUNFT);
+			    }
+			} );
+		}
+		
+		//XML Reise
+		if(true) {
+			
+		}
+		
+		//XML Aktivitaet
+		if(Main.features.get(16).toString().equals("1")) {
+			JButton btnBookActivity = new JButton("Eine Aktivitaet buchen");
+			btnBookActivity.setPreferredSize(new Dimension(200, 300));
+			
+			centerPanel.add(btnBookActivity);
+			this.add(centerPanel, BorderLayout.CENTER);
+			window.addPanel(new Aktivitaetspanel(window), Aktivitaetspanel.PAGE_AKTIVITAET);
+			
+			//Button click switches Panel
+			btnBookActivity.addActionListener(new ActionListener() {
+			    public void actionPerformed (ActionEvent event) {
+			    	window.changeWindow(Aktivitaetspanel.PAGE_AKTIVITAET);
 			    }
 			} );
 		}

@@ -37,6 +37,7 @@ public class XMLParser {
 			fillList(features, document,"PayPal");
 			fillList(features, document,"GiroPay");
 			fillList(features, document,"Waehrungsrechner");
+			fillList(features, document, "Aktivitaet");
 		
 		} catch (ParserConfigurationException e) {
 			e.printStackTrace();

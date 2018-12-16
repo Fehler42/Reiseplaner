@@ -17,4 +17,5 @@
 	<PayPal>1</PayPal>
 	<GiroPay>0</GiroPay>
 	<Waehrungsrechner>1</Waehrungsrechner>
+	<Aktivitaet>1</Aktivitaet>
 </Features>
