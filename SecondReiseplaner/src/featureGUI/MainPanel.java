@@ -19,6 +19,7 @@ public class MainPanel extends JPanel {
 	private static final long serialVersionUID = -1672666201944716784L;
 
 	private ReisePlaner window;
+
 	public MainPanel(ReisePlaner win) {
 		window = win;
 		this.setLayout(new BorderLayout());
@@ -28,23 +29,23 @@ public class MainPanel extends JPanel {
 
 		// centerPanel contains buttons to book stuff
 		JPanel centerPanel = new JPanel(new FlowLayout()); // dynamic layout
-		
-		if(Main.features.get(0).toString().equals("1")) {
+
+		if (Main.features.get(0).toString().equals("1")) {
 			JButton btnBookResort = new JButton("Eine Unterkunft buchen");
 			btnBookResort.setPreferredSize(new Dimension(200, 300));
-			
+
 			centerPanel.add(btnBookResort);
 			this.add(centerPanel, BorderLayout.CENTER);
 			window.addPanel(new UnterkunftPanel(window), UnterkunftPanel.PAGE_UNTERKUNFT);
-			
-			//Button click switches Panel
+
+			// Button click switches Panel
 			btnBookResort.addActionListener(new ActionListener() {
-			    public void actionPerformed (ActionEvent event) {
-			    	window.changeWindow(UnterkunftPanel.PAGE_UNTERKUNFT);
-			    }
-			} );
+				public void actionPerformed(ActionEvent event) {
+					window.changeWindow(UnterkunftPanel.PAGE_UNTERKUNFT);
+				}
+			});
 		}
-		
+
 		//XML Reise
 		if(true) {
 			
@@ -67,6 +68,5 @@ public class MainPanel extends JPanel {
 			} );
 		}
 		
-
 	}
 }

@@ -18,7 +18,7 @@ public class Main {
 				features = new ArrayList<String>();
 				CheckList.fillList();
 				window = new ReisePlaner();
-				
+
 			}
 		});
 	}

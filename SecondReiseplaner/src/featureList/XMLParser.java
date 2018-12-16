@@ -1,4 +1,5 @@
 package featureList;
+
 import java.beans.FeatureDescriptor;
 import java.io.File;
 import java.io.IOException;
@@ -21,6 +22,7 @@ public class XMLParser {
 		try {
 			documentBuilder = documentBuilderFactory.newDocumentBuilder();
 			Document document = documentBuilder.parse(file);
+
 			fillList(Main.features, document,"Unterkunft_buchen");
 			fillList(features, document,"Hotel");
 			fillList(features, document,"Ferienhaus");
@@ -48,9 +50,9 @@ public class XMLParser {
 		}
 		return features;
 	}
-	
+
 	private static void fillList(List<String> features, Document document, String name) {
 		features.add((document.getElementsByTagName(name).item(0).getTextContent()));
 	}
-	
+
 }
