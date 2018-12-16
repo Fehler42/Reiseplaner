@@ -27,7 +27,7 @@ public refines class BessereMain {
 	public static final String PAGE_ROUTE2 = "Route2";
 	public JPanel route2Page;
 	
-	public final String[] listEntries= { "Schnellste Route", "Kürzeste Route", "Schönste Route", "Keine Autobahn"};
+	public final String[] listEntries= { "Schnellste Route", "Kuerzeste Route", "Schoenste Route", "Keine Autobahn"};
 	
 	private JList list;
 	
@@ -36,9 +36,10 @@ public refines class BessereMain {
 		
 		setTrue();
 		
-		JButton btnBookRoute2 = new JButton("Route auswählen");
-		JButton btnBookNoRoute = new JButton("Keine Route auswählen");
+		JButton btnBookRoute2 = new JButton("Route auswaehlen");
+		JButton btnBookNoRoute = new JButton("Keine Route auswaehlen");
 		btnBookRoute2.setPreferredSize(new Dimension(200, 300));
+		btnBookNoRoute.setPreferredSize(new Dimension(200, 300));
 		
 		routePage.add(btnBookRoute2);
 		routePage.add(btnBookNoRoute);
