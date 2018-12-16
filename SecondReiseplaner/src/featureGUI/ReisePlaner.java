@@ -18,7 +18,7 @@ public class ReisePlaner extends JFrame {
 	//GUI design stuff
 	public JPanel masterPanel;
 	public JPanel mainPage;
-	public JPanel payPage;
+	public PayPanel payPage;
 	public CardLayout cardLayout;
 	public boolean isRoute = false;
 	
@@ -66,6 +66,10 @@ public class ReisePlaner extends JFrame {
 
 	public void addPanel(JPanel subPanel, String key) {
 		masterPanel.add(subPanel, key);
+	}
+
+	public void updateText(Integer price) {
+		payPage.updateDescription("Das kostet " + price);
 	}
 	
 //	public void updatePrice() {

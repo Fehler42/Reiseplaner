@@ -20,6 +20,8 @@ public class PayPal extends JPanel {
 		window = win;
 		JButton btnPayPal = new JButton("Bezahlen mit Paypal");
 		
+		this.add(btnPayPal);
+		
 		//Button click switches Panel
 		btnPayPal.addActionListener(new ActionListener() {
 		    public void actionPerformed (ActionEvent event) {

@@ -62,4 +62,8 @@ public class PayPanel extends JPanel {
 			this.add(waehrungsrechner);
 		}
 	}
+	
+	public void updateDescription(String descr) {
+		description.setText(descr);
+	}
 }

@@ -23,8 +23,7 @@ public class MainPanel extends JPanel {
 		this.setLayout(new BorderLayout());
 
 		// TODO: Suchleiste schreiben
-		JPanel suchleiste = new JPanel();
-		suchleiste.setLayout(new BoxLayout(suchleiste, BoxLayout.X_AXIS)); // so far this gives the least headache
+		JPanel suchleiste = new Suchleiste();
 		this.add(suchleiste, BorderLayout.NORTH);
 
 		// centerPanel contains buttons to book stuff
@@ -36,7 +35,7 @@ public class MainPanel extends JPanel {
 			btnBookResort.setPreferredSize(new Dimension(200, 300));
 			
 			centerPanel.add(btnBookResort);
-			
+			this.add(centerPanel, BorderLayout.CENTER);
 			window.addPanel(new UnterkunftPanel(window), UnterkunftPanel.PAGE_UNTERKUNFT);
 			
 			//Button click switches Panel
@@ -46,7 +45,7 @@ public class MainPanel extends JPanel {
 			    }
 			} );
 		}
-		this.add(centerPanel, BorderLayout.CENTER);
+		
 
 	}
 }

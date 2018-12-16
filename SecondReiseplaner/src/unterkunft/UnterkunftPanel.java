@@ -29,6 +29,23 @@ public class UnterkunftPanel extends JPanel {
 		window.addPanel(this, PAGE_UNTERKUNFT);
 
 		//TODO: XML stuff for Hotel, Ferienhaus and co.
-		
+		//XML HOTEL
+		if(true) {
+			JButton hotelBtn = new JButton("Hotel buchen");
+			hotelBtn.setPreferredSize(new Dimension(200, 300));
+			
+			resorts.add(hotelBtn);
+			window.addPanel(new Hotel(window), Hotel.PAGE_HOTELS);
+			
+			hotelBtn.addActionListener(new ActionListener() {
+
+				@Override
+				public void actionPerformed(ActionEvent arg0) {
+					window.changeWindow(Hotel.PAGE_HOTELS);
+					
+				}
+				
+			});
+		}
 	}
 }
