@@ -16,25 +16,48 @@ import javax.swing.SwingConstants;
 import java.awt.event.*;
 
 /**
- * enables a Währungsrechner
+ * enables a Waehrungsrechner
  */
 public refines class BessereMain {
 	private static final long serialVersionUID = 1L;
 	
+	private JTextField entryEuro;
+	private JLabel entryDollar;
+	
 	public void design() {
 		Super().design();
 		
-		JLabel euro = new JLabel("Euro");
-		JLabel dollar = new JLabel("Dollar");
-		JTextField entryEuro = new JTextField("1,00");
-		JTextField entryDollar = new JTextField("1,14");
+		JLabel euro = new JLabel("Euro: ");
+		euro.setHorizontalAlignment(JLabel.RIGHT);
+		JLabel dollar = new JLabel("Dollar: ");
+		dollar.setHorizontalAlignment(JLabel.RIGHT);
+		entryEuro = new JTextField("1.00");
+		entryDollar = new JLabel("1.14");
 		JButton btnCalc = new JButton("Umrechnen");
+		btnCalc.setHorizontalAlignment(JButton.CENTER);
+		
+		btnCalc.addActionListener(new ActionListener() {
+			public void actionPerformed (ActionEvent event) {
+				double euroInput;
+				try {
+					euroInput = Double.parseDouble(entryEuro.getText().replace(',', '.').trim());
+					String bla = String.valueOf(euroInput * 1.14);
+					entryDollar.setText(bla);
+				}
+				catch(Exception e) {
+					entryDollar.setText("Ungueltige Angabe");
+				}
+				
+		    }
+		});
 		
 		JPanel waehrungsPanel = (JPanel) payPage.getComponent(2);
-		waehrungsPanel.add(euro);
-		waehrungsPanel.add(entryEuro);
-		waehrungsPanel.add(dollar);
-		waehrungsPanel.add(entryDollar);
+		JPanel calcStuff = new JPanel(new GridLayout(2,2));
+		calcStuff.add(euro);
+		calcStuff.add(entryEuro);
+		calcStuff.add(dollar);
+		calcStuff.add(entryDollar);
+		waehrungsPanel.add(calcStuff);
 		waehrungsPanel.add(btnCalc);
 	}
 }
