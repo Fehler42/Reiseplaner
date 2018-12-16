@@ -1,16 +1,15 @@
 package featureGUI;
 
-import java.awt.BorderLayout;
 import java.awt.CardLayout;
 import java.awt.Color;
-import java.awt.FlowLayout;
-
 import javax.swing.BorderFactory;
-import javax.swing.BoxLayout;
+
 import javax.swing.JFrame;
-import javax.swing.JLabel;
+
 import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
+
+import unterkunft.UnterkunftPanel;
 
 public class ReisePlaner extends JFrame {
 
@@ -20,7 +19,7 @@ public class ReisePlaner extends JFrame {
 	public JPanel masterPanel;
 	public JPanel mainPage;
 	public JPanel payPage;
-	CardLayout cardLayout;
+	public CardLayout cardLayout;
 	public boolean isRoute = false;
 	
 	//CardLayout page names
@@ -44,20 +43,29 @@ public class ReisePlaner extends JFrame {
 		setContentPane(masterPanel);
 		
 		designMainPage();
+		setVisible(true);
 	}
 	
 	/**
 	 * Idea: Each base feature creates their own card page and the refining features add to those cards
 	 */
 	public void designMainPage() {
-		mainPage = new MainPanel();
-		payPage = new PayPanel();
+		mainPage = new MainPanel(this);
+		payPage = new PayPanel(this);
 		
 		masterPanel.add(mainPage, PAGE_MAIN);
 		masterPanel.add(payPage, PAGE_PAY);
 		
 		cardLayout.show(masterPanel, PAGE_MAIN);
 		
+	}
+	
+	public void changeWindow(final String PAGE) {
+		cardLayout.show(masterPanel, PAGE);
+	}
+
+	public void addPanel(JPanel subPanel, String key) {
+		masterPanel.add(subPanel, key);
 	}
 	
 //	public void updatePrice() {
