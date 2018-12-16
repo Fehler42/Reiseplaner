@@ -17,15 +17,14 @@ public class PayPanel extends JPanel {
 	private static final long serialVersionUID = -3256227552006190720L;
 
 	private JLabel description;
-	
+
 	public PayPanel(ReisePlaner win) {
-		
-		
+
 		this.setLayout((LayoutManager) new BoxLayout(this, BoxLayout.Y_AXIS));
-		
+
 		JPanel upperPage = new JPanel(new BorderLayout());
 		JPanel lowerPage = new JPanel(new BorderLayout());
-		
+
 		this.add(upperPage);
 		this.add(lowerPage);
 
@@ -33,21 +32,21 @@ public class PayPanel extends JPanel {
 
 		description.setAlignmentX(CENTER_ALIGNMENT);
 		description.setAlignmentY(CENTER_ALIGNMENT);
-		
+
 		upperPage.add(description, BorderLayout.SOUTH);
-		
-		if(Main.features.get(13).toString().equals("1")) {
+
+		if (Main.features.get(13).toString().equals("1")) {
 			lowerPage.add(new PayPal(win));
 		}
-		
-		else if(Main.features.get(14).toString().equals("1")) {
+
+		else if (Main.features.get(14).toString().equals("1")) {
 			lowerPage.add(new GiroPay(win));
 		}
-		
-		else if(Main.features.get(12).toString().equals("1")) {
+
+		else if (Main.features.get(12).toString().equals("1")) {
 			lowerPage.add(new Kreditkarte(win));
 		}
-	
+
 		/*
 		 * IF XML DEFINES THIS AS FEATURE
 		 */
@@ -60,7 +59,7 @@ public class PayPanel extends JPanel {
 			this.add(waehrungsrechner);
 		}
 	}
-	
+
 	public void updateDescription(String descr) {
 		description.setText(descr);
 	}

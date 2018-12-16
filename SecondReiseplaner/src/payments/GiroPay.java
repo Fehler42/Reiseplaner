@@ -12,18 +12,19 @@ import start.Main;
 public class GiroPay extends JPanel {
 
 	private static final long serialVersionUID = -3838927946898700250L;
-	
+
 	private ReisePlaner window;
+
 	public GiroPay(ReisePlaner win) {
 		window = win;
-		
+
 		JButton btnGiroPay = new JButton("Bezahlen mit GiroPay");
-		
-		//Button click switches Panel
+
+		// Button click switches Panel
 		btnGiroPay.addActionListener(new ActionListener() {
-		    public void actionPerformed (ActionEvent event) {
-		    	window.changeWindow(ReisePlaner.PAGE_MAIN);
-		    }
-		} );
+			public void actionPerformed(ActionEvent event) {
+				window.changeWindow(ReisePlaner.PAGE_MAIN);
+			}
+		});
 	}
 }

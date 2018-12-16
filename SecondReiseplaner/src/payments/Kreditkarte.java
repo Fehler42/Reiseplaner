@@ -14,14 +14,15 @@ public class Kreditkarte extends JPanel {
 	private static final long serialVersionUID = 2969876350064524808L;
 
 	private ReisePlaner window;
+
 	public Kreditkarte(ReisePlaner win) {
 		window = win;
 		JButton btnKreditkarte = new JButton("Kreditkarte");
-		//Button click switches Panel
+		// Button click switches Panel
 		btnKreditkarte.addActionListener(new ActionListener() {
-		    public void actionPerformed (ActionEvent event) {
-		    	window.changeWindow(ReisePlaner.PAGE_MAIN);
-		    }
-		} );
+			public void actionPerformed(ActionEvent event) {
+				window.changeWindow(ReisePlaner.PAGE_MAIN);
+			}
+		});
 	}
 }
