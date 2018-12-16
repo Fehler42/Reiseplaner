@@ -37,12 +37,12 @@ public class CheckList {
 			System.out.println("invalid list of features!");
 		} else if (features.get(9).toString().equals("1") && features.get(8).toString().equals("0")) {
 			System.out.println("invalid list of features!");
-		} else if (!(features.get(6).toString().equals("1") && features.get(6).toString().equals("0")
-				&& features.get(6).toString().equals("0"))
-				|| !(features.get(6).toString().equals("0") && features.get(6).toString().equals("1")
-						&& Main.features.get(6).toString().equals("0"))
-				|| !(features.get(6).toString().equals("0") && features.get(6).toString().equals("0")
-						&& features.get(6).toString().equals("1"))) {
+		} else if (!(features.get(12).toString().equals("1") && features.get(13).toString().equals("0")
+				&& features.get(14).toString().equals("0"))
+				&& !(features.get(12).toString().equals("0") && features.get(13).toString().equals("1")
+						&& Main.features.get(14).toString().equals("0"))
+				&& !(features.get(12).toString().equals("0") && features.get(13).toString().equals("0")
+						&& features.get(14).toString().equals("1"))) {
 			System.out.println("invalid list of features!");
 		}
 		return features;

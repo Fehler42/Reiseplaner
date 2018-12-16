@@ -13,8 +13,8 @@
 			<Route_planen>1</Route_planen>
 		<Flug>1</Flug>
 		<Kreuzfahrt>1</Kreuzfahrt>
-	<Kreditkarte>1</Kreditkarte>
+	<Kreditkarte>0</Kreditkarte>
 	<PayPal>1</PayPal>
-	<GiroPay>1</GiroPay>
+	<GiroPay>0</GiroPay>
 	<Waehrungsrechner>1</Waehrungsrechner>
 </Features>
