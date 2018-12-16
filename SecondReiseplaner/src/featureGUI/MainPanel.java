@@ -29,8 +29,7 @@ public class MainPanel extends JPanel {
 		// centerPanel contains buttons to book stuff
 		JPanel centerPanel = new JPanel(new FlowLayout()); // dynamic layout
 		
-		//TODO: XML auslesen Unterkunft buchen
-		if(true) {
+		if(Main.features.get(0).toString().equals("1")) {
 			JButton btnBookResort = new JButton("Eine Unterkunft buchen");
 			btnBookResort.setPreferredSize(new Dimension(200, 300));
 			

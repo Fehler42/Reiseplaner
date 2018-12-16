@@ -11,16 +11,17 @@ import javax.xml.parsers.ParserConfigurationException;
 import org.w3c.dom.Document;
 import org.xml.sax.SAXException;
 
+import start.Main;
+
 public class XMLParser {
-	
 	public static List<String> parse(List<String> features) {
-		File file = new File("features.xml");
+		File file = new File("src/featureList/features.xml");
 		DocumentBuilderFactory documentBuilderFactory = DocumentBuilderFactory.newInstance();
 		DocumentBuilder documentBuilder;
 		try {
 			documentBuilder = documentBuilderFactory.newDocumentBuilder();
 			Document document = documentBuilder.parse(file);
-			fillList(features, document,"Unterkunft_buchen");
+			fillList(Main.features, document,"Unterkunft_buchen");
 			fillList(features, document,"Hotel");
 			fillList(features, document,"Ferienhaus");
 			fillList(features, document,"Campingplatz");
