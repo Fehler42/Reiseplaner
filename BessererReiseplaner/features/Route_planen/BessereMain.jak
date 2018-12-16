@@ -39,6 +39,7 @@ public refines class BessereMain {
 		JButton btnBookRoute2 = new JButton("Route auswaehlen");
 		JButton btnBookNoRoute = new JButton("Keine Route auswaehlen");
 		btnBookRoute2.setPreferredSize(new Dimension(200, 300));
+		btnBookNoRoute.setPreferredSize(new Dimension(200, 300));
 		
 		routePage.add(btnBookRoute2);
 		routePage.add(btnBookNoRoute);
