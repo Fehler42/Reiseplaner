@@ -1,5 +1,7 @@
 /bin/
 /src/.gitignore
+/src/BessereMain.jak
+/src/BessereMain.java
 
 /.settings/
 
