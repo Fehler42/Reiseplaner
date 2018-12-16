@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <Features>
-	<Suchleiste>1</Suchleiste>
 	<Unterkunft_buchen>1</Unterkunft_buchen>
 		<Hotel>1</Hotel>
 		<Ferienhaus>1</Ferienhaus>
