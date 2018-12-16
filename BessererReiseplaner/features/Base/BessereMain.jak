@@ -76,7 +76,11 @@ public class BessereMain extends JFrame {
 		payPage.add(upperPage);
 		payPage.add(lowerPage);
 		
-		JPanel waehrungsrechner = new JPanel(new GridLayout(3,2));
+		
+		
+		JPanel waehrungsrechner = new JPanel();
+		waehrungsrechner.setLayout(new BoxLayout(waehrungsrechner, BoxLayout.Y_AXIS));
+		
 		payPage.add(waehrungsrechner);
 		
 		JLabel description = new JLabel("Das kostet ");
