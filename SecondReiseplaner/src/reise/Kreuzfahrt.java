@@ -11,7 +11,7 @@ import featureGUI.ReisePlaner;
 
 public class Kreuzfahrt extends JPanel {
 
-	public static final String PAGE_Kreuzfahrt = "Kreuzfahrt";
+	public static final String PAGE_KREUZFAHRT = "KREUZFAHRT";
 	private static final long serialVersionUID = -3074338466012820576L;
 
 	public Kreuzfahrt(ReisePlaner win) {
