@@ -7,7 +7,6 @@ import javax.swing.JButton;
 import javax.swing.JPanel;
 
 import featureGUI.ReisePlaner;
-import start.Main;
 
 public class GiroPay extends JPanel {
 
