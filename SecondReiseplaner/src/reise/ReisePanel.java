@@ -53,7 +53,7 @@ public class ReisePanel extends JPanel {
 			carBtn.setPreferredSize(new Dimension(200, 300));
 
 			travel.add(carBtn);
-			window.addPanel(new Kreuzfahrt(window), Auto_mieten.PAGE_AUTO);
+			window.addPanel(new Auto_mieten(window), Auto_mieten.PAGE_AUTO);
 
 			carBtn.addActionListener(new ActionListener() {
 
