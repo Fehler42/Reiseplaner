@@ -90,13 +90,13 @@ public class ReisePanel extends JPanel {
 			kreuzfahrtBtn.setPreferredSize(new Dimension(200, 300));
 
 			travel.add(kreuzfahrtBtn);
-			window.addPanel(new Kreuzfahrt(window), Kreuzfahrt.PAGE_Kreuzfahrt);
+			window.addPanel(new Kreuzfahrt(window), Kreuzfahrt.PAGE_KREUZFAHRT);
 
 			kreuzfahrtBtn.addActionListener(new ActionListener() {
 
 				@Override
 				public void actionPerformed(ActionEvent arg0) {
-					window.changeWindow(Kreuzfahrt.PAGE_Kreuzfahrt);
+					window.changeWindow(Kreuzfahrt.PAGE_KREUZFAHRT);
 
 				}
 

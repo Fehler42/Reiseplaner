@@ -9,7 +9,6 @@ public class CheckList {
 	public static void fillList() {
 		Main.features = XMLParser.parse(Main.features);
 		checkList(Main.features);
-		System.out.println(Main.features);
 	}
 
 	public static List<String> checkList(List<String> features) {
