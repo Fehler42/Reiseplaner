@@ -8,6 +8,7 @@ import javax.swing.JPanel;
 
 import featureGUI.ItemList;
 import featureGUI.ReisePlaner;
+import unterkunft.CampingPanel;
 
 public class Auto_mieten extends JPanel {
 
@@ -22,7 +23,11 @@ public class Auto_mieten extends JPanel {
 				"teures Auto", "Super-Mega-Hammer-Ultra-Deluxe Auto"));
 		ArrayList<Integer> carPrices = new ArrayList<>(Arrays.asList(30, 50, 100, 500));
 
-		ItemList list = new ItemList(win, carNames, carPrices);
+CarPanel camps = new CarPanel(win);
+		
+		final String panelKey = CarPanel.PAGE_CAR;
+		
+		ItemList list = new ItemList(win, carNames, carPrices, panelKey);
 
 		this.add(list, BorderLayout.NORTH);
 	}

@@ -15,6 +15,7 @@ import start.Main;
 
 public class PayPanel extends JPanel {
 
+	public static final String PAGE_PAYPANEL = "PAY";
 	private static final long serialVersionUID = -3256227552006190720L;
 
 	private JLabel description;
