@@ -18,8 +18,8 @@ public class Route_planen extends JPanel {
 
 		this.setLayout(new BorderLayout());
 
-		ArrayList<String> routeNames = new ArrayList<>(Arrays.asList("Schnellste Route", "Kürzeste Route",
-				"Schönste Route", "Keine Autobahn"));
+		ArrayList<String> routeNames = new ArrayList<>(Arrays.asList("Schnellste Route", "Kuerzeste Route",
+				"Schoenste Route", "Keine Autobahn"));
 		ArrayList<Integer> routePrices = new ArrayList<>(Arrays.asList(30, 50, 100, 500));
 
 		ItemList list = new ItemList(win, routeNames, routePrices);
