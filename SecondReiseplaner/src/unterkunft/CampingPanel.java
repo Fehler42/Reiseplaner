@@ -35,13 +35,13 @@ public class CampingPanel extends JPanel {
 			bungalowBtn.setPreferredSize(new Dimension(200, 300));
 
 			resorts.add(bungalowBtn);
-			window.addPanel(new Bungalow(window), Bungalow.PAGE_BUNGALOWS);
+			window.addPanel(new Bungalow(window), Bungalow.PAGE_BUNGALOW);
 
 			bungalowBtn.addActionListener(new ActionListener() {
 
 				@Override
 				public void actionPerformed(ActionEvent arg0) {
-					window.changeWindow(Bungalow.PAGE_BUNGALOWS);
+					window.changeWindow(Bungalow.PAGE_BUNGALOW);
 
 				}
 			});
@@ -53,13 +53,13 @@ public class CampingPanel extends JPanel {
 			stellplatzBtn.setPreferredSize(new Dimension(200, 300));
 
 			resorts.add(stellplatzBtn);
-			window.addPanel(new Stellplatz(window), Stellplatz.PAGE_BUNGALOWS);
+			window.addPanel(new Stellplatz(window), Stellplatz.PAGE_STELLPLATZ);
 
 			stellplatzBtn.addActionListener(new ActionListener() {
 
 				@Override
 				public void actionPerformed(ActionEvent arg0) {
-					window.changeWindow(Stellplatz.PAGE_BUNGALOWS);
+					window.changeWindow(Stellplatz.PAGE_STELLPLATZ);
 
 				}
 			});

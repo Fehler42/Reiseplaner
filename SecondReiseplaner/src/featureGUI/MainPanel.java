@@ -32,6 +32,7 @@ public class MainPanel extends JPanel {
 		// centerPanel contains buttons to book stuff
 		JPanel centerPanel = new JPanel(new FlowLayout()); // dynamic layout
 
+		//XML Unterkunft
 		if (Main.features.get(0).toString().equals("1")) {
 			JButton btnBookResort = new JButton("Eine Unterkunft buchen");
 			btnBookResort.setPreferredSize(new Dimension(200, 300));
@@ -47,6 +48,8 @@ public class MainPanel extends JPanel {
 				}
 			});
 		}
+		
+		//XML Reise
 		if (Main.features.get(6).toString().equals("1")) {
 			JButton btnBookTravel = new JButton("Eine Reise buchen");
 			btnBookTravel.setPreferredSize(new Dimension(200, 300));
@@ -61,11 +64,6 @@ public class MainPanel extends JPanel {
 					window.changeWindow(ReisePanel.PAGE_REISE);
 				}
 			});
-		}
-
-		//XML Reise
-		if(true) {
-			
 		}
 		
 		//XML Aktivitaet
