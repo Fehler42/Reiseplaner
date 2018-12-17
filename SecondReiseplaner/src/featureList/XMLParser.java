@@ -23,7 +23,7 @@ public class XMLParser {
 			documentBuilder = documentBuilderFactory.newDocumentBuilder();
 			Document document = documentBuilder.parse(file);
 
-			fillList(Main.features, document,"Unterkunft_buchen");
+			fillList(features, document,"Unterkunft_buchen");
 			fillList(features, document,"Hotel");
 			fillList(features, document,"Ferienhaus");
 			fillList(features, document,"Campingplatz");
