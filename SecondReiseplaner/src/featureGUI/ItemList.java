@@ -17,7 +17,7 @@ public class ItemList extends JList {
 	private ArrayList<String> itemList;
 	private ReisePlaner window;
 
-	private String destinationWindow;
+	private final String destinationWindow;
 	
 	/**
 	 * Creates a list of items that if item is clicked changes the panel to the corresponding destination

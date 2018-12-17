@@ -16,7 +16,7 @@ public class CampingPanel extends JPanel {
 
 	private static final long serialVersionUID = 7467826917297513583L;
 
-	public static final String PAGE_CAMPINGSTYLE = "CAMPINGPLATZ";
+	public static final String PAGE_CAMPINGSTYLE = "CAMPINGPLATZ_OBERSEITE";
 	private ReisePlaner window;
 
 	public CampingPanel(ReisePlaner win) {

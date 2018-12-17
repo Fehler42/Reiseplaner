@@ -12,7 +12,7 @@ import start.Main;
 
 public class Campingplatz extends JPanel {
 
-	public static final String PAGE_CAMPINGPLATZ = "CAMPINGPLATZ";
+	public static final String PAGE_CAMPINGPLATZ = "CAMPINGPLATZ_OPTION";
 	private static final long serialVersionUID = -3074338466012820576L;
 
 	public Campingplatz(ReisePlaner win) {
@@ -25,8 +25,11 @@ public class Campingplatz extends JPanel {
 		ArrayList<Integer> campingPrices = new ArrayList<>(Arrays.asList(30, 50, 100, 500));
 
 		CampingPanel camps = new CampingPanel(win);
-		win.addPanel(camps, CampingPanel.PAGE_CAMPINGSTYLE);
-		ItemList list = new ItemList(win, campingplatzNames, campingPrices, CampingPanel.PAGE_CAMPINGSTYLE);
+		
+		final String panelKey = CampingPanel.PAGE_CAMPINGSTYLE;
+		
+		win.addPanel(camps, panelKey);
+		ItemList list = new ItemList(win, campingplatzNames, campingPrices, panelKey);
 
 		this.add(list, BorderLayout.NORTH);
 	}
