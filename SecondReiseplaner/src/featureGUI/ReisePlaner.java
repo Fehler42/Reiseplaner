@@ -9,6 +9,7 @@ import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
 
+import featureList.CheckList;
 import unterkunft.UnterkunftPanel;
 
 public class ReisePlaner extends JFrame {
@@ -28,6 +29,7 @@ public class ReisePlaner extends JFrame {
 
 	public ReisePlaner() {
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		this.setLocationRelativeTo(null);
 
 		// startpositions x, y && window width, height
 		setBounds(100, 100, 800, 600);
@@ -43,7 +45,7 @@ public class ReisePlaner extends JFrame {
 		setContentPane(masterPanel);
 
 		designMainPage();
-		setVisible(true);
+		setVisible(!CheckList.showWarning);
 	}
 
 	/**
