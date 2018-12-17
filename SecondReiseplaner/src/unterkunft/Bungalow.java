@@ -19,7 +19,7 @@ public class Bungalow extends JPanel {
 		this.setLayout(new BorderLayout());
 
 		ArrayList<String> bungalowNames = new ArrayList<>(
-				Arrays.asList("Billiger Bungalow", "Nicht so billiger Bungalow", "teurer Bungalow",
+				Arrays.asList("Billiger Bungalow", "Nicht so billiger Bungalow", "Teurer Bungalow",
 						"Super-Mega-Hammer-Ultra-Deluxe Bungalow"));
 		ArrayList<Integer> bungalowPrices = new ArrayList<>(Arrays.asList(30, 50, 100, 500));
 

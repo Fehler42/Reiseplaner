@@ -1,6 +1,5 @@
 package featureList;
 
-import java.beans.FeatureDescriptor;
 import java.io.File;
 import java.io.IOException;
 import java.util.List;
@@ -12,8 +11,6 @@ import javax.xml.parsers.ParserConfigurationException;
 import org.w3c.dom.Document;
 import org.xml.sax.SAXException;
 
-import start.Main;
-
 public class XMLParser {
 	public static List<String> parse(List<String> features) {
 		File file = new File("src/featureList/features.xml");
@@ -23,7 +20,7 @@ public class XMLParser {
 			documentBuilder = documentBuilderFactory.newDocumentBuilder();
 			Document document = documentBuilder.parse(file);
 
-			fillList(Main.features, document,"Unterkunft_buchen");
+			fillList(features, document,"Unterkunft_buchen");
 			fillList(features, document,"Hotel");
 			fillList(features, document,"Ferienhaus");
 			fillList(features, document,"Campingplatz");

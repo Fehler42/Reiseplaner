@@ -2,13 +2,13 @@ package featureGUI;
 
 import java.util.ArrayList;
 import java.util.HashMap;
-import java.util.List;
 
 import javax.swing.AbstractListModel;
 import javax.swing.JList;
 import javax.swing.event.ListSelectionEvent;
 import javax.swing.event.ListSelectionListener;
 
+@SuppressWarnings("rawtypes")
 public class ItemList extends JList {
 
 	private static final long serialVersionUID = 7435490687240344649L;
@@ -26,7 +26,7 @@ public class ItemList extends JList {
 	 * @param prices the prices attached to the items
 	 * @param destination the destination panel
 	 */
-	@SuppressWarnings({ "unchecked", "rawtypes", "serial" })
+	@SuppressWarnings({ "unchecked", "serial" })
 	public ItemList(ReisePlaner win, ArrayList<String> items, ArrayList<Integer> prices, final String destination) {
 		destinationWindow = destination;
 		window = win;

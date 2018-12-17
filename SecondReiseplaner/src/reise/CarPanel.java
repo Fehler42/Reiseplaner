@@ -2,9 +2,7 @@ package reise;
 
 import java.awt.BorderLayout;
 import java.awt.FlowLayout;
-import java.awt.BorderLayout;
 import java.awt.Dimension;
-import java.awt.FlowLayout;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
@@ -14,11 +12,6 @@ import javax.swing.JPanel;
 import featureGUI.PayPanel;
 import featureGUI.ReisePlaner;
 import start.Main;
-import unterkunft.Bungalow;
-
-import javax.swing.JPanel;
-
-import featureGUI.ReisePlaner;
 
 public class CarPanel extends JPanel {
 	private static final long serialVersionUID = 7467826917297513583L;

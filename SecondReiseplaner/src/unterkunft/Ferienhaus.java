@@ -19,7 +19,7 @@ public class Ferienhaus extends JPanel {
 		this.setLayout(new BorderLayout());
 
 		ArrayList<String> ferienhausNames = new ArrayList<>(Arrays.asList("Billiges Ferienhaus",
-				"Nicht so billiges Ferienhaus", "teures Ferienhaus", "Super-Mega-Hammer-Ultra-Deluxe Ferienhaus"));
+				"Nicht so billiges Ferienhaus", "Teures Ferienhaus", "Super-Mega-Hammer-Ultra-Deluxe Ferienhaus"));
 		ArrayList<Integer> ferienhausPrices = new ArrayList<>(Arrays.asList(30, 50, 100, 500));
 
 		ItemList list = new ItemList(win, ferienhausNames, ferienhausPrices);

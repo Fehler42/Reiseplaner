@@ -19,7 +19,7 @@ public class Hotel extends JPanel {
 		this.setLayout(new BorderLayout());
 
 		ArrayList<String> hotelNames = new ArrayList<>(Arrays.asList("Billiges Hotel", "Nicht so billiges Hotel",
-				"teures Hotel", "Super-Mega-Hammer-Ultra-Deluxe Hotel"));
+				"Teures Hotel", "Super-Mega-Hammer-Ultra-Deluxe Hotel"));
 		ArrayList<Integer> hotelPrices = new ArrayList<>(Arrays.asList(30, 50, 100, 500));
 
 		ItemList list = new ItemList(win, hotelNames, hotelPrices);

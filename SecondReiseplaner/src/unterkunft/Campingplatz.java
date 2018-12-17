@@ -8,7 +8,6 @@ import javax.swing.JPanel;
 
 import featureGUI.ItemList;
 import featureGUI.ReisePlaner;
-import start.Main;
 
 public class Campingplatz extends JPanel {
 
@@ -20,7 +19,7 @@ public class Campingplatz extends JPanel {
 		this.setLayout(new BorderLayout());
 
 		ArrayList<String> campingplatzNames = new ArrayList<>(
-				Arrays.asList("Billiger Campingplatz", "Nicht so billiger Campingplatz", "teurer Campingplatz",
+				Arrays.asList("Billiger Campingplatz", "Nicht so billiger Campingplatz", "Teurer Campingplatz",
 						"Super-Mega-Hammer-Ultra-Deluxe Campingplatz"));
 		ArrayList<Integer> campingPrices = new ArrayList<>(Arrays.asList(30, 50, 100, 500));
 

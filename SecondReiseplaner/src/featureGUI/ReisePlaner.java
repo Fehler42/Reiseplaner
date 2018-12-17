@@ -10,7 +10,7 @@ import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
 
 import featureList.CheckList;
-import unterkunft.UnterkunftPanel;
+
 
 public class ReisePlaner extends JFrame {
 
