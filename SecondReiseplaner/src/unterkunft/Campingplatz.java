@@ -24,16 +24,6 @@ public class Campingplatz extends JPanel {
 						"Super-Mega-Hammer-Ultra-Deluxe Campingplatz"));
 		ArrayList<Integer> campingPrices = new ArrayList<>(Arrays.asList(30, 50, 100, 500));
 
-		//XML BUUNGALOW
-		if (Main.features.get(4).toString().equals("1")) {
-
-		}
-
-		//XML STELLPLATZ
-		if (Main.features.get(5).toString().equals("1")) {
-
-		}
-
 		ItemList list = new ItemList(win, campingplatzNames, campingPrices);
 
 		this.add(list, BorderLayout.NORTH);
