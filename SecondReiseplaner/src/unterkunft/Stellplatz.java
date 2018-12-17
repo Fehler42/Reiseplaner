@@ -19,7 +19,7 @@ public class Stellplatz extends JPanel {
 		this.setLayout(new BorderLayout());
 
 		ArrayList<String> stellplatzNames = new ArrayList<>(
-				Arrays.asList("Billiger Stellplatz", "Nicht so billiger Stellplatz", "teurer Stellplatz",
+				Arrays.asList("Billiger Stellplatz", "Nicht so billiger Stellplatz", "Teurer Stellplatz",
 						"Super-Mega-Hammer-Ultra-Deluxe Stellplatz"));
 		ArrayList<Integer> stellplatzPrices = new ArrayList<>(Arrays.asList(30, 50, 100, 500));
 

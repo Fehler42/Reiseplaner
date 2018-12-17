@@ -7,7 +7,6 @@ import javax.swing.JButton;
 import javax.swing.JPanel;
 
 import featureGUI.ReisePlaner;
-import start.Main;
 
 public class Kreditkarte extends JPanel {
 
@@ -17,7 +16,7 @@ public class Kreditkarte extends JPanel {
 
 	public Kreditkarte(ReisePlaner win) {
 		window = win;
-		JButton btnKreditkarte = new JButton("Kreditkarte");
+		JButton btnKreditkarte = new JButton("Bezahlen mit Kreditkarte");
 		// Button click switches Panel
 		btnKreditkarte.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent event) {

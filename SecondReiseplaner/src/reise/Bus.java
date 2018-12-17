@@ -19,7 +19,7 @@ public class Bus extends JPanel {
 		this.setLayout(new BorderLayout());
 
 		ArrayList<String> busNames = new ArrayList<>(Arrays.asList("Billiger Bus", "Nicht so billiger Bus",
-				"teures Bus", "Super-Mega-Hammer-Ultra-Deluxe Bus"));
+				"Teurer Bus", "Super-Mega-Hammer-Ultra-Deluxe Bus"));
 		ArrayList<Integer> busPrices = new ArrayList<>(Arrays.asList(30, 50, 100, 500));
 
 		ItemList list = new ItemList(win, busNames, busPrices);

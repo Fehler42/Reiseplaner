@@ -19,7 +19,7 @@ public class Kreuzfahrt extends JPanel {
 		this.setLayout(new BorderLayout());
 
 		ArrayList<String> kreuzfahrtNames = new ArrayList<>(Arrays.asList("Billige Kreuzfahrt",
-				"Nicht so billige Kreuzfahrt", "teure Kreuzfahrt", "Super-Mega-Hammer-Ultra-Deluxe Kreuzfahrt"));
+				"Nicht so billige Kreuzfahrt", "Teure Kreuzfahrt", "Super-Mega-Hammer-Ultra-Deluxe Kreuzfahrt"));
 		ArrayList<Integer> kreuzfahrtPrices = new ArrayList<>(Arrays.asList(30, 50, 100, 500));
 
 		ItemList list = new ItemList(win, kreuzfahrtNames, kreuzfahrtPrices);

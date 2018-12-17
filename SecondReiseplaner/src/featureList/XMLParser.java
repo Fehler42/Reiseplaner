@@ -1,6 +1,5 @@
 package featureList;
 
-import java.beans.FeatureDescriptor;
 import java.io.File;
 import java.io.IOException;
 import java.util.List;
@@ -11,8 +10,6 @@ import javax.xml.parsers.ParserConfigurationException;
 
 import org.w3c.dom.Document;
 import org.xml.sax.SAXException;
-
-import start.Main;
 
 public class XMLParser {
 	public static List<String> parse(List<String> features) {

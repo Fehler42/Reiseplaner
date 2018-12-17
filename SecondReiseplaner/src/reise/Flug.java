@@ -19,7 +19,7 @@ public class Flug extends JPanel {
 		this.setLayout(new BorderLayout());
 
 		ArrayList<String> flugNames = new ArrayList<>(Arrays.asList("Billiger Flug", "Nicht so billiger Flug",
-				"teures Flug", "Super-Mega-Hammer-Ultra-Deluxe Flug"));
+				"Teurer Flug", "Super-Mega-Hammer-Ultra-Deluxe Flug"));
 		ArrayList<Integer> flugPrices = new ArrayList<>(Arrays.asList(30, 50, 100, 500));
 
 		ItemList list = new ItemList(win, flugNames, flugPrices);
