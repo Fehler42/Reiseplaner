@@ -13,7 +13,7 @@ import org.xml.sax.SAXException;
 
 public class XMLParser {
 	public static List<String> parse(List<String> features) {
-		File file = new File("src/featureList/features.xml");
+		File file = new File("features.xml");
 		DocumentBuilderFactory documentBuilderFactory = DocumentBuilderFactory.newInstance();
 		DocumentBuilder documentBuilder;
 		try {
