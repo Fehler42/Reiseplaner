@@ -17,8 +17,18 @@ public class ItemList extends JList {
 	private ArrayList<String> itemList;
 	private ReisePlaner window;
 
+	private String destinationWindow;
+	
+	/**
+	 * Creates a list of items that if item is clicked changes the panel to the corresponding destination
+	 * @param win the Window
+	 * @param items the list of items offered
+	 * @param prices the prices attached to the items
+	 * @param destination the destination panel
+	 */
 	@SuppressWarnings({ "unchecked", "rawtypes", "serial" })
-	public ItemList(ReisePlaner win, ArrayList<String> items, ArrayList<Integer> prices) {
+	public ItemList(ReisePlaner win, ArrayList<String> items, ArrayList<Integer> prices, final String destination) {
+		destinationWindow = destination;
 		window = win;
 
 		// TODO: Assert that both list are same length ...
@@ -48,13 +58,23 @@ public class ItemList extends JList {
 			}
 		});
 	}
+	
+	/**
+	 * creates a list that if item selected changes Window to PayPanel
+	 * @param win the window
+	 * @param items the list of items offered
+	 * @param prices the prices for the items
+	 */
+	public ItemList(ReisePlaner win, ArrayList<String> items, ArrayList<Integer> prices) {
+		this(win, items, prices, ReisePlaner.PAGE_PAY);
+	}
 
 	private void listValueChanged(ListSelectionEvent evt) {
 		final String s = (String) this.getSelectedValue();
 
 		window.updateText(set.get(s));
 
-		window.changeWindow(window.PAGE_PAY);
+		window.changeWindow(destinationWindow);
 
 	}
 }

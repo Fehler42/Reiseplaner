@@ -23,7 +23,9 @@ public class Campingplatz extends JPanel {
 						"Super-Mega-Hammer-Ultra-Deluxe Campingplatz"));
 		ArrayList<Integer> ferienhausPrices = new ArrayList<>(Arrays.asList(30, 50, 100, 500));
 
-		ItemList list = new ItemList(win, campingplatzNames, ferienhausPrices);
+		CampingPanel camps = new CampingPanel(win);
+		win.addPanel(camps, CampingPanel.PAGE_CAMPINGSTYLE);
+		ItemList list = new ItemList(win, campingplatzNames, ferienhausPrices, CampingPanel.PAGE_CAMPINGSTYLE);
 
 		this.add(list, BorderLayout.NORTH);
 	}

@@ -44,7 +44,6 @@ public class UnterkunftPanel extends JPanel {
 					window.changeWindow(Hotel.PAGE_HOTELS);
 
 				}
-
 			});
 		}
 		// XML FERIENHAUS
