@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Features>
+	<Unterkunft_buchen>1</Unterkunft_buchen>
+		<Hotel>1</Hotel>
+		<Ferienhaus>1</Ferienhaus>
+		<Campingplatz>1</Campingplatz>
+			<Bungalow>1</Bungalow>
+			<Stellplatz>1</Stellplatz>
+	<Reise_buchen>1</Reise_buchen>
+		<Busreise>1</Busreise>
+		<Auto_mieten>1</Auto_mieten>
+			<Route_planen>1</Route_planen>
+		<Flug>1</Flug>
+		<Kreuzfahrt>1</Kreuzfahrt>
+	<Kreditkarte>0</Kreditkarte>
+	<PayPal>1</PayPal>
+	<GiroPay>0</GiroPay>
+	<Waehrungsrechner>1</Waehrungsrechner>
+	<Aktivitaet>1</Aktivitaet>
+</Features>
